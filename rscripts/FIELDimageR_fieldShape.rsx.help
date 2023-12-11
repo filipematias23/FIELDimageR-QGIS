@@ -1,0 +1,13 @@
+{"ALG_DESC": "The user should select the four experimental field corners and the shape file with plots will be automatically built using a grid with the number of ranges and rows.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "num_rows": "Number of rows.",
+  "num_cols": "Number of columns.",
+  "points_layer": "Input vector layer containing four points at the field corners: The clicking sequence must be (1) upper left, (2) upper right, (3) lower right, and (4) lower left.",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic.",
+  "buffer": "Optional - Numeric, negative values should be used to remove boundaries from neighbor plot.",
+  "x_plot_size": "Optional - Specific plot shape size on X.axis. For example, mosaic with pixels in meter x_plot_size=0.5 which means 0.5m or 50cm in the plot shape.",
+  "y_plot_size": "Optional - Specific plot shape size on y.axis. For example, mosaic with pixels in meter y_plot_size=1 which means 1m or 100cm in the plot shape.",
+  "fieldData": "Optional - Data frame with plot ID and all attributes of each plot (Traits as columns and genotypes as rows).",
+  "fieldMap": "Optional - Matrix with plots ID identified by rows and ranges.",
+  "PlotID": "Optional - Name of plot ID in the fieldData file to combine with fieldShape.",
+  "output_shapefile": "Output vector layer with labeled plots."}

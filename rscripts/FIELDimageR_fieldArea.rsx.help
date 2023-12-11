@@ -1,0 +1,6 @@
+{"ALG_DESC": "Calculating the percentage of object area in the entire mosaic or per plot using the grid_shapefile_layer (e.g.g, canopy or leaf_area_index).",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_remSoil_layer": "Input raster layer containing the field orthomosaic without soil pixels. Please, use the function 'fieldMask' to remove the mosaic background.",
+  "grid_shapefile_layer": "Grid plot shape file layer to be used as reference, please use the function 'fieldShape'.",
+  "field": "Optional. Character (field name) or numeric (length nrow) to identify pixels. Must be unique names to help the zonal function to differentiate between plots for zonal calculation. Check terra::rasterize in R.",
+  "output_fieldArea": "Output grid shapefile layer with area percentage per plot (e.g., leaf_area_index or canopy)."}

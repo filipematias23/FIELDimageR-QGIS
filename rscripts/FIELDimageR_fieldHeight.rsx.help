@@ -1,0 +1,6 @@
+{"ALG_DESC": "Calculating mosaic height and volume based on the digital surface model (DSM).",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "DSM_bef": "Input raster digital surface model (DSM) mosaic class SpatRaster to be used as base line (minumun height or soil level).",
+  "DSM_aft": "Input raster digital surface model (DSM) mosaic class SpatRaster to be used as aimed line (maximum height or plants in the field).",
+  "output_CHM": "Output raster layer with digital height (CHM=Canopy Height Model).",
+  "output_CVM": "Output raster layer with digital volume (CVM=Canopy Volume Model)."}

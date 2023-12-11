@@ -1,0 +1,6 @@
+{"ALG_DESC": "Building vegetation indices using Red, Green, Blue, Red Edge, and NIR band.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic with at least 3 layers.",
+  "bands": "Sequence of bands/wavelength in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB images and 'Blue,Green,Red,RE,NIR' for multispectral. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'RE' and NOT 'RedEdge'; etc.",
+  "index": "vector with the vegetation indices to be calculated. Included indices are avaliable for RGB Images (BI BIM SCI GLI HI NGRDI SI VARI HUE  BGI) and  Multispectral images (PSRI NDVI GNDVI RVI NDRE TVI CVI CIG CIRE DVI EVI). More information at https://github.com/OpenDroneMap/FIELDimageR#P6.",
+  "output_shapefile": "Output raster layer with calculated vegetation indices."}

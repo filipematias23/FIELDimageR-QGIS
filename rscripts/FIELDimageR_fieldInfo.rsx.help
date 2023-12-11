@@ -1,0 +1,6 @@
+{"ALG_DESC": "Extract information from image using the fieldShape file as reference.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic with layers data to be extracted.",
+  "grid_shapefile_layer": "Grid plot shape file layer to be used as reference, please use the function fieldShape.",
+  "fun_extract": "Function to summarize the values (e.g. mean, min, mas, sum, etc.).",
+  "output_shapefile_info": "Output grid shapefile layer with data extracted per plot."}
