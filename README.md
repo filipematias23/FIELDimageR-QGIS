@@ -3,7 +3,7 @@
 > This tutorial is a compilation of functions made on [R](https://www.r-project.org/) by [Popat Pawar](https://www.linkedin.com/in/dr-popat-pawar-204bb136/) and [Filipe Matias](https://www.linkedin.com/in/filipe-matias-27bab5199/) to analyze orthomosaic images from research fields using [QGIS](https://qgis.org/en/site/). The tutorial teachs how to builds a plot shapefile in order to extract information for each plot to evaluate different wavelengths, vegetation indices, canopy percentage, and plant height. It allows removing the soil and segmenting orthomosaics to creat masks.
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_logo.jpg" width="60%" height="60%">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_logo.jpg" width="70%" height="70%">
 </p>
 
 <div id="menu" />
