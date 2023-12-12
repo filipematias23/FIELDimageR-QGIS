@@ -29,11 +29,11 @@
 
 [Step 8. Estimating plant height and biomass](#p7)
 
-[Step 9. Saving output files](#p8) 
+[Step 9. Estimating object area percentage (e.g. canopy)](#p8) 
 
-[Step 10. Cropping individual plots and saving](#p9)
+[Step 10. Saving output files](#p9)
 
-[Contact](#p21)
+[Contact](#contact)
 
 <div id="instal" />
 
@@ -236,7 +236,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 <div id="p6" />
 
 ---------------------------------------------
-### Extracting data from field images
+### Removing the soil effect based on image segmentation
 
 > The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**:
 
@@ -309,6 +309,98 @@ Attention: The plots are identified in ascending order from left to right and bo
 <div id="p8" />
 
 ---------------------------------------------
-### Estimating plant height and biomass
+### Estimating object area percentage (e.g. canopy)
 
-The plant height can be estimated by calculating the Canopy Height Model (CHM) and biomass by calculating Canopy Volume Model (CVM). This model uses the difference between the Digital Surface Model (DSM) from the soil b
+FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot. The mask output from **`fieldMask`** and the grig_fieldshape output from **`fieldShape`** must be used. Function to use: **`fieldArea`**.
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_24.jpg">
+</p>
+
+<br />
+
+> To better visualize AreaPercentage or Canopy you can coloring it by doing a duble click at **output fieldArea** and folowing the steps below:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_26.jpg">
+</p>
+
+<br />
+
+> Checking if the values make sense: 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_25.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="contact" />
+
+---------------------------------------------
+### Google Groups Forum
+
+> This discussion group provides an online source of information about the FIELDimageR package. Report a bug and ask a question at: 
+* https://groups.google.com/forum/#!forum/fieldimager 
+* https://community.opendronemap.org/t/about-the-fieldimager-category/4130
+
+<br />
+
+### Developers
+> **Help improve FIELDimageR-QGIS pipeline**. The easiest way to modify the package is by cloning the repository and making changes using [R projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+
+> If you have questions, join the forum group at https://groups.google.com/forum/#!forum/fieldimager
+
+>Try to keep commits clean and simple
+
+>Submit a **_pull request_** with detailed changes and test results.
+
+**Let's  work together and help more people (students, professors, farmers, etc) to have access to this knowledge. Thus, anyone anywhere can learn how to apply remote sensing in agriculture.** 
+
+<br />
+
+### Licenses
+
+> The R/FIELDimageR package as a whole is distributed under [GPL-3 (GNU General Public License version 3)](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+<br />
+
+### Citation
+
+* Pawar P & Matias FI.* FIELDimageR.Extra. (2023) (Submitted)
+
+* *Matias FI, Caraza-Harter MV, Endelman JB.* FIELDimageR: An R package to analyze orthomosaic images from agricultural field trials. **The Plant Phenome J.** 2020; [https://doi.org/10.1002/ppj2.20005](https://doi.org/10.1002/ppj2.20005)
+
+<br />
+
+### Author
+
+> Popat Pawar
+* [GitHub](https://github.com/pspawar71)
+* [LinkedIn](https://www.linkedin.com/in/dr-popat-pawar-204bb136/)
+* E-mail: pspawar71@gmail.com
+  
+> Filipe Matias
+* [GitHub](https://github.com/filipematias23)
+* [LinkedIn](https://www.linkedin.com/in/filipe-matias-27bab5199/)
+* E-mail: filipematias23@gmail.com
+
+<br />
+
+### Acknowledgments
+
+> * [OpenDroneMap](https://www.opendronemap.org/)
+> * [Phenome-Force Channel](https://youtube.com/@phenomeforce6569)
+> * [r-spatial community](https://github.com/r-spatial)
+
+<br />
+
+[Menu](#menu)
+
+<br />
+
+
+
+
