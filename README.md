@@ -358,6 +358,14 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <br />
 
+> To better visualize the Canopy-Height-Model (CHM) and Canopy-Volume-Model (CVM) you can coloring it by doing a duble click at **output CHM** or **output CVM** and folowing the steps below:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_34.jpg">
+</p>
+
+<br />
+
 [Menu](#menu)
 
 <div id="p9" />
