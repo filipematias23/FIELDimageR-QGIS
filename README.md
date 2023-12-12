@@ -104,6 +104,23 @@
 
 [Menu](#menu)
 
+<div id="p2" />
+
+---------------------------------------------
+### Loading mosaics and visualizing
+
+> There are many ways to upload files (e.g., raster, table, shapefiles, etc.) to QGIS. The image below highlights some examples how to start a new project:
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_29.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
 <div id="p3" />
 
 ---------------------------------------------
