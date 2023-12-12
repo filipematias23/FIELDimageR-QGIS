@@ -1,6 +1,6 @@
 ## [FIELDimageR-QGIS](https://github.com/OpenDroneMap/FIELDimageR): A Tool to Analyze Images From Agricultural Field Trials in [QGIS](https://qgis.org/en/site/).
 
-> This package is a compilation of functions made on [R](https://www.r-project.org/) by [Popat Pawar](https://www.linkedin.com/in/dr-popat-pawar-204bb136/) and [Filipe Matias](https://www.linkedin.com/in/filipe-matias-27bab5199/) to analyze orthomosaic images from research fields. To prepare the image it first allows to crop the image, remove soil and weeds and rotate the image. The package also builds a plot shapefile in order to extract information for each plot to evaluate different wavelengths, vegetation indices, stand count, canopy percentage, and plant height.
+> This tutorial is a compilation of functions made on [R](https://www.r-project.org/) by [Popat Pawar](https://www.linkedin.com/in/dr-popat-pawar-204bb136/) and [Filipe Matias](https://www.linkedin.com/in/filipe-matias-27bab5199/) to analyze orthomosaic images from research fields using [QGIS](https://qgis.org/en/site/). The tutorial teachs how to builds a plot shapefile in order to extract information for each plot to evaluate different wavelengths, vegetation indices, canopy percentage, and plant height. It allows removing the soil and segmenting orthomosaics to creat masks.
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_logo.jpg" width="60%" height="60%">
