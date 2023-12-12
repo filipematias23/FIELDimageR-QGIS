@@ -120,7 +120,7 @@
 > Uploading files (e.g., raster, table, shapefiles, etc.) to QGIS is very simple:
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_29a.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_30.jpg">
 </p>
 
 <br />
