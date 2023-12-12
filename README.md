@@ -190,6 +190,31 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 [Menu](#menu)
 
+<div id="p4" />
+
+---------------------------------------------
+### Editing the plot shapefile
+
+> QGIS has great tools to edit shapefiles and plots. For instance, the user needs first to activete the **Advanced Digitizing Toolbar**.
+
+* Activate it at **View > Toolbars > Advanced Digitizing Toolbar**
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_27.jpg">
+</p>
+
+<br />
+
+* Editing plots is very simple and intuitive:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_28.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
 <div id="p5" />
 
 ---------------------------------------------
