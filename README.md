@@ -331,7 +331,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 ---------------------------------------------
 ### Extracting data from field images
 
-> The function * exact_extract* from **[exactextractr](https://github.com/isciences/exactextractr)** was adapted for agricultural field experiments through function [**`fieldInfo`**], where users can extract the mean, max, min, and sum per plot:
+> The function * exact_extract* from **[exactextractr](https://github.com/isciences/exactextractr)** was adapted for agricultural field experiments through function **`fieldInfo`**, where users can extract the mean, max, min, and sum per plot:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_17.jpg">
