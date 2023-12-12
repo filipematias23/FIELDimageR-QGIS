@@ -75,6 +75,12 @@
 
 > Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS folder:
 
+<br />
+
+**Install - Option 01:**
+
+<br />
+
 * (1) Link: [https://github.com/filipematias23/FIELDimageR-QGIS](https://github.com/filipematias23/FIELDimageR-QGIS)
 * (2) Press **Code** 
 * (3) Download ZIP
@@ -98,6 +104,18 @@
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_13.jpg">
+</p>
+
+<br />
+
+**Install - Option 02:**
+
+<br />
+
+> Another easier option is adding the downloaded **FIELDimageR-QGIS > rscripts** folder as an additional **rscripts** at QGIS by following the steps below: 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_35.jpg">
 </p>
 
 <br />
