@@ -11,9 +11,7 @@
 ---------------------------------------------
 ## Resources
   
-[Installation](#instal)
-
-[Step 1. How to start?](#p1)
+[Step 1. Installation](#instal)
      
 [Step 2. Loading mosaics and visualizing](#p2)
 
