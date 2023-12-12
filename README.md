@@ -131,7 +131,7 @@ FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldSh
 
 <br />
 
-After creating the **point_shape** layer dubleclick on *fieldShape* function at  **Tool** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
+After creating the **point_shape** layer dubleclick on *fieldShape* function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
 
 > Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
@@ -178,6 +178,10 @@ Coloring and visualizing **grid_fieldshape** based on traits imported from **fie
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_10.jpg">
 </p>
+
+<br />
+
+> Attention: There is another great *software/tutorial* provided by [Diego Gris](https://www.linkedin.com/in/diego-gris/) called **draw-plots-qgis** with some other ways to biuld *grig_shapefiles*, check it at: [https://github.com/diegojgris/draw-plots-qgis](https://github.com/diegojgris/draw-plots-qgis) 
 
 <br />
 
