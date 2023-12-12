@@ -109,12 +109,18 @@
 ---------------------------------------------
 ### Loading mosaics and visualizing
 
-> There are many ways to upload files (e.g., raster, table, shapefiles, etc.) to QGIS. The image below highlights some examples how to start a new project:
+> There are many ways to create or start a **New Project** in QGIS. The image below highlights some examples:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_29a.jpg">
+</p>
 
 <br />
 
+> Uploading files (e.g., raster, table, shapefiles, etc.) to QGIS is very simple:
+
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_29.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_29a.jpg">
 </p>
 
 <br />
