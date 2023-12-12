@@ -472,7 +472,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 ### Citation
 
-* * Pawar P & Matias FI.* FIELDimageR-QGIS (2024). (submitted) 
+* *Pawar P & Matias FI.* FIELDimageR-QGIS (2024). (submitted) 
 
 * *Pawar P. & Matias FI.* FIELDimageR.Extra: Advancing user experience and computational efficiency for analysis of orthomosaic from agricultural field trials. **The Plant Phenome J.** 2023; [https://doi.org/10.1002/ppj2.20083](https://doi.org/10.1002/ppj2.20083)
 
