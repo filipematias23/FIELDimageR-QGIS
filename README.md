@@ -21,15 +21,15 @@
 
 [Step 5. Building vegetation indices](#p5)
 
-[Step 6. Removing the soil effect based on image segmentation](#p5a)
+[Step 6. Removing the soil effect based on image segmentation](#p6)
 
-[Step 7. Extracting data from field images](#p6)
+[Step 7. Extracting data from field images](#p7)
 
-[Step 8. Estimating plant height and biomass](#p7)
+[Step 8. Estimating plant height and biomass](#p8)
 
-[Step 9. Estimating object area percentage (e.g. canopy)](#p8) 
+[Step 9. Estimating object area percentage (e.g. canopy)](#p9) 
 
-[Step 10. Saving output files](#p9)
+[Step 10. Saving output files](#p10)
 
 [Contact](#contact)
 
@@ -329,12 +329,12 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 [Menu](#menu)
 
-<div id="p8" />
+<div id="p9" />
 
 ---------------------------------------------
-### Estimating object area percentage (e.g. canopy)
+### Estimating object area percentage (e.g. canopy and LAI)
 
-FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot. The mask output from **`fieldMask`** and the grig_fieldshape output from **`fieldShape`** must be used. Function to use: **`fieldArea`**.
+FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot or LAI (Leaf Area Index). The mask output from **`fieldMask`** and the grig_fieldshape output from **`fieldShape`** must be used. Function to use: **`fieldArea`**.
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_24.jpg">
