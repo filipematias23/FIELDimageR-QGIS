@@ -23,13 +23,13 @@
 
 [Step 5. Building vegetation indices](#p5)
 
-[Step 6. Image segmentation based on unsupervised (K-means) and supervised (Random Forest) methods to remove the soil effect](#p5a)
+[Step 6. Removing the soil effect based on image segmentation](#p5a)
 
 [Step 7. Extracting data from field images](#p6)
 
-[Step 8. Vizualizing extracted data](#p7)
+[Step 8. Estimating plant height and biomass](#p7)
 
-[Step 9. Saving output files and opening them in the QGIS](#p8) 
+[Step 9. Saving output files](#p8) 
 
 [Step 10. Cropping individual plots and saving](#p9)
 
@@ -40,14 +40,14 @@
 ---------------------------------------------
 ### Installation
 
-Start the pipeline by installing the software:
+> Start the pipeline by installing the software:
 
 1. [R](https://www.r-project.org/) 
 2. [QGIS](https://qgis.org/en/site/).
 
 <br />
 
-Make sure to open the **Processing Toolbox** visualization in **QGIS**:
+> Make sure to open the **Processing Toolbox** visualization in **QGIS**:
 
 * (1) View 
 * (2) Panels 
@@ -60,7 +60,7 @@ Make sure to open the **Processing Toolbox** visualization in **QGIS**:
 
 <br />
 
-The nest step is installing **Processing R Provider** plugin in **QGIS** following the steps:
+> The nest step is installing **Processing R Provider** plugin in **QGIS** following the steps:
 
 * (1) Plugins 
 * (2) Manage and Install Plugins 
@@ -75,7 +75,7 @@ The nest step is installing **Processing R Provider** plugin in **QGIS** followi
 
 <br />
 
-Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS folder:
+> Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS folder:
 
 * (1) Link: [https://github.com/filipematias23/FIELDimageR-QGIS](https://github.com/filipematias23/FIELDimageR-QGIS)
 * (2) Press **Code** 
@@ -111,7 +111,7 @@ Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS 
 ---------------------------------------------
 ### Building the plot shapefile
 
-FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape**. The function starts by creating a layer with four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom).
+> FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape**. The function starts by creating a layer with four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom).
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_3.jpg">
@@ -131,9 +131,9 @@ FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldSh
 
 <br />
 
-After creating the **point_shape** layer dubleclick on **`fieldShape`** function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
+> After creating the **point_shape** layer dubleclick on **`fieldShape`** function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
 
-> Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
+Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_6.jpg">
@@ -141,7 +141,7 @@ After creating the **point_shape** layer dubleclick on **`fieldShape`** function
 
 <br />
 
-One matrix can be used to identify the plots position according to the image above. The user can creat a matrix (manually built) informing plots ID. For instance, the new column PlotID will be the new identification. You can download an external table with field data example here: [fieldData.csv](https://drive.google.com/file/d/1elAOEg-tw_zMQuPnZT5MTwWmrpB-sYSv/view?usp=sharing) and a fieldMap matrix with plots ID example here: [fieldMap.csv](https://drive.google.com/file/d/1lFqZFmaXqzk3UqoN5VH_lOLRilzB6K_d/view?usp=sharing)
+> One matrix can be used to identify the plots position according to the image above. The user can creat a matrix (manually built) informing plots ID. For instance, the new column PlotID will be the new identification. You can download an external table with field data example here: [fieldData.csv](https://drive.google.com/file/d/1elAOEg-tw_zMQuPnZT5MTwWmrpB-sYSv/view?usp=sharing) and a fieldMap matrix with plots ID example here: [fieldMap.csv](https://drive.google.com/file/d/1lFqZFmaXqzk3UqoN5VH_lOLRilzB6K_d/view?usp=sharing)
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_7.jpg">
@@ -149,7 +149,7 @@ One matrix can be used to identify the plots position according to the image abo
 
 <br />
 
-Check below some examples of **`fieldData.csv`** and **`fieldMap.csv`**. Important to make sure that fieldMap is reflecting the real position of each plot in the field:
+> Check below some examples of **`fieldData.csv`** and **`fieldMap.csv`**. Important to make sure that fieldMap is reflecting the real position of each plot in the field:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_8.jpg">
@@ -157,7 +157,7 @@ Check below some examples of **`fieldData.csv`** and **`fieldMap.csv`**. Importa
 
 <br />
 
-After creating the grid_shapefile right click and **Open Attribute Table** to check if the plots are correctly positioned:
+> After creating the grid_shapefile right click and **Open Attribute Table** to check if the plots are correctly positioned:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_11.jpg">
@@ -165,7 +165,7 @@ After creating the grid_shapefile right click and **Open Attribute Table** to ch
 
 <br />
 
-Users can use a specific plot size to build the grid shape file by informing X and Y plot length in the parameter x_plot_size and y_plot_size. It´s very important to highlight the applied values are connected with the mosaic resolution and unit. For example, x_plot_size=0.6 means 0.6m and x_plot_size=5 means 5m or (60cm by 400cm) in the example below
+> Users can use a specific plot size to build the grid shape file by informing X and Y plot length in the parameter x_plot_size and y_plot_size. It´s very important to highlight the applied values are connected with the mosaic resolution and unit. For example, x_plot_size=0.6 means 0.6m and x_plot_size=5 means 5m or (60cm by 400cm) in the example below
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_9.jpg">
@@ -173,7 +173,7 @@ Users can use a specific plot size to build the grid shape file by informing X a
 
 <br />
 
-Coloring and visualizing **grid_fieldshape** based on traits imported from **fieldData.csv**:
+> Coloring and visualizing **grid_fieldshape** based on traits imported from **fieldData.csv**:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_10.jpg">
@@ -197,7 +197,7 @@ Coloring and visualizing **grid_fieldshape** based on traits imported from **fie
 ---------------------------------------------
 ### Building vegetation indices
 
-A general number of indices are implemented in *FIELDimageR-QGIS* using the function **`fieldIndex`**. Also, you can build your own index using the parameter `myIndex`. 
+> A general number of indices are implemented in *FIELDimageR-QGIS* using the function **`fieldIndex`**. Also, you can build your own index using the parameter `myIndex`. 
 
 <br />
 
@@ -207,7 +207,7 @@ A general number of indices are implemented in *FIELDimageR-QGIS* using the func
 
 <br />
 
-Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'.
+> Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'.
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_14.jpg">
@@ -215,7 +215,7 @@ Calculating vegetation indices is very simple. Users must provide the sequence o
 
 <br />
 
-To better visualize specific vegetation index you can coloring it by doing a duble click at **Index layer** and folow the steps below:
+> To better visualize specific vegetation index you can coloring it by doing a duble click at **Indices layer** and folowing the steps below:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_15.jpg">
@@ -223,7 +223,7 @@ To better visualize specific vegetation index you can coloring it by doing a dub
 
 <br />
 
-Multispectral images also can be used. For instance, it is important to write the right order of layers, for example **Blue,Green,Red,RE,NIR**. It must be write 'RE' and NOT 'RedEdge'. You can download one example of **Multispectral** here: [**EX1_5Band.tif**](https://drive.google.com/open?id=1vYb3l41yHgzBiscXm_va8HInQsJR1d5Y)
+> Multispectral images also can be used. For instance, it is important to write the right order of layers, for example **Blue,Green,Red,RE,NIR**. It must be write 'RE' and NOT 'RedEdge'. You can download one example of **Multispectral** here: [**EX1_5Band.tif**](https://drive.google.com/open?id=1vYb3l41yHgzBiscXm_va8HInQsJR1d5Y)
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_16.jpg">
@@ -231,4 +231,84 @@ Multispectral images also can be used. For instance, it is important to write th
 
 <br />
 
+[Menu](#menu)
 
+<div id="p6" />
+
+---------------------------------------------
+### Extracting data from field images
+
+> The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_21.jpg">
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_22.jpg">
+</p>
+
+<br />
+
+> Checking the quality of image segmentation to make sure the soil was removed:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_23.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p7" />
+
+---------------------------------------------
+### Extracting data from field images
+
+> The function * exact_extract* from **[exactextractr](https://github.com/isciences/exactextractr)** was adapted for agricultural field experiments through function [**`fieldInfo`**], where users can extract the mean, max, min, and sum per plot:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_17.jpg">
+</p>
+
+<br />
+
+> Checking the **Attribute Table** to make sure data were extracted per plot:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_18.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p8" />
+
+---------------------------------------------
+### Estimating plant height and biomass
+
+> The plant height can be estimated by calculating the Canopy Height Model (CHM) and biomass by calculating Canopy Volume Model (CVM). This model uses the difference between the Digital Surface Model (DSM) from the soil base (before there is any sproute, [Download EX_DSM0.tif](https://drive.google.com/open?id=1lrq-5T6x_GrbkCtpDSDiX1ldvSwEBFX-)) and the DSM file from the vegetative growth (once plants are grown, [Download EX_DSM1.tif](https://drive.google.com/open?id=1q_H4Ef1f1yQJOPtkVMJfcb2SvHcxJ3ya)). To calculate CHM and CVM we used the function **`fieldHeight`**, where CVM=cellSize(CHM)*CHM. 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_19.jpg" width="70%" height="70%">
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_20.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p8" />
+
+---------------------------------------------
+### Estimating plant height and biomass
+
+The plant height can be estimated by calculating the Canopy Height Model (CHM) and biomass by calculating Canopy Volume Model (CVM). This model uses the difference between the Digital Surface Model (DSM) from the soil b
