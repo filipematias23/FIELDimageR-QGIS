@@ -357,7 +357,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 ---------------------------------------------
 ### Estimating object area percentage (e.g. canopy and LAI)
 
-FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot or LAI (Leaf Area Index). The mask output from **`fieldMask`** and the grig_fieldshape output from **`fieldShape`** must be used. Function to use: **`fieldArea`**.
+> FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot or LAI (Leaf Area Index). The mask output from **`fieldMask`** and the grig_fieldshape output from **`fieldShape`** must be used. Function to use: **`fieldArea`**.
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_24.jpg">
@@ -377,6 +377,29 @@ FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot or LAI (
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_25.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p10" />
+
+---------------------------------------------
+### Saving output files
+
+> Saving projects is very easy in QGIS. The format is **`Project.qgz`**:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_31.jpg">
+</p>
+
+<br />
+
+> Shapefiles (e.g., grids, points, polygons, etc.) and images can be saved by selecting the layer and clicking on **Export**. Make sure to select the right **Format**, for example the **`ESRI Shapelife`** for grids_fieldshape. Also, the right **CRS**, for our example is **`EPSG:32616 - WGS 84`**:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_32.jpg">
 </p>
 
 <br />
@@ -415,7 +438,9 @@ FIELDimageR-QGIS can be used to evaluate the canopy percentage per plot or LAI (
 
 ### Citation
 
-* Pawar P & Matias FI.* FIELDimageR.Extra. *Pawar P. & Matias FI.* FIELDimageR.Extra: Advancing user experience and computational efficiency for analysis of orthomosaic from agricultural field trials. **The Plant Phenome J.** 2023; [https://doi.org/10.1002/ppj2.20083](https://doi.org/10.1002/ppj2.20083)
+* * Pawar P & Matias FI.* FIELDimageR-QGIS (2024). (submitted) 
+
+* *Pawar P. & Matias FI.* FIELDimageR.Extra: Advancing user experience and computational efficiency for analysis of orthomosaic from agricultural field trials. **The Plant Phenome J.** 2023; [https://doi.org/10.1002/ppj2.20083](https://doi.org/10.1002/ppj2.20083)
 
 * *Matias FI, Caraza-Harter MV, Endelman JB.* FIELDimageR: An R package to analyze orthomosaic images from agricultural field trials. **The Plant Phenome J.** 2020; [https://doi.org/10.1002/ppj2.20005](https://doi.org/10.1002/ppj2.20005)
 
