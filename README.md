@@ -87,7 +87,19 @@ Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS 
 * (8) Now past the copied FIELDimageR functions downloaded on **rscripts** folder from the GitHub Tutorial.
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_2.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_12a.jpg">
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_12.jpg">
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_13.jpg">
 </p>
 
 <br />
@@ -99,7 +111,7 @@ Downloading **FIELDimageR-QGIS** functions and saving on your **rscripts** QGIS 
 ---------------------------------------------
 ### Building the plot shapefile
 
-FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape**. The function starts by creating a layer with four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom). The number of columns and rows must be informed. At this point, the experimental borders can be eliminated (check the example):
+FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape**. The function starts by creating a layer with four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom).
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_3.jpg">
@@ -119,7 +131,7 @@ FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldSh
 
 <br />
 
-After creating the **point_shape** layer dubleclick on fieldShape function and follow the steps to creat a basic grid_shapefile:
+After creating the **point_shape** layer dubleclick on *fieldShape* function at  **Tool** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
 
 > Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
@@ -137,13 +149,15 @@ One matrix can be used to identify the plots position according to the image abo
 
 <br />
 
-Important to make sure fieldMap is reflecting the real position of each plot in the field:
+Check below some examples of **fieldData.csv** and **fieldMap**. Important to make sure that fieldMap is reflecting the real position of each plot in the field:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_8.jpg">
 </p>
 
 <br />
+
+After creating the grid_shapefile right click and **Open Attribute Table** to check if the plots are correctly positioned:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_11.jpg">
