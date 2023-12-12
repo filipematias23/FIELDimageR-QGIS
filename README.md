@@ -23,7 +23,7 @@
 
 [Step 6. Removing the soil effect based on image segmentation](#p6)
 
-[Step 7. Extracting data from field images](#p7)
+[Step 7. Extracting data from field images and visualization](#p7)
 
 [Step 8. Estimating plant height and biomass](#p8)
 
@@ -325,6 +325,14 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_18.jpg">
+</p>
+
+<br />
+
+> Visualizing extracted data and coloring plots according to the average value by doing a duble click at **output shapefile info** and folowing the steps below:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_33.jpg">
 </p>
 
 <br />
