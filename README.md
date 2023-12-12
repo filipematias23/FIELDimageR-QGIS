@@ -449,13 +449,19 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > Many times when developing algorithms it is necessary to crop the mosaic using the plot fieldShape as a reference and sort/store cropped plot images on specific folders. For instance, the function **`fieldCropGrid`** allows cropping plots and identification by 'plotID'. The user also can save each plot according to a 'classifier' logic (Attention: a column in the 'fieldShape' with the desired classification must be informed). In the example below, each plot in the **'EX1_RGB'** mosaic is being cropped according to the **'grid_shape'** shapefile, identified by the information in the **'plot'** column, and stored/saved in specific folders with different levels of **Maturity** as **'classifier'**.
 
+<br />
+
+**Attention:** There is **NO** output returned to QGIS. All cropped plots will be saved in the **output_directory**.
+
+<br />
+
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_36.jpg">
 </p>
 
 <br />
 
-> Checking cropped plots **.jpg** classified on each Maturity level folder: 
+> Checking cropped plots **.jpg** classified in each Maturity level folder: 
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_37a.jpg" width="70%" height="70%">
