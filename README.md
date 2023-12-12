@@ -131,7 +131,7 @@ FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldSh
 
 <br />
 
-After creating the **point_shape** layer dubleclick on *fieldShape* function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
+After creating the **point_shape** layer dubleclick on **`fieldShape`** function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
 
 > Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
@@ -149,7 +149,7 @@ One matrix can be used to identify the plots position according to the image abo
 
 <br />
 
-Check below some examples of **fieldData.csv** and **fieldMap**. Important to make sure that fieldMap is reflecting the real position of each plot in the field:
+Check below some examples of **`fieldData.csv`** and **`fieldMap.csv`**. Important to make sure that fieldMap is reflecting the real position of each plot in the field:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_8.jpg">
@@ -181,23 +181,54 @@ Coloring and visualizing **grid_fieldshape** based on traits imported from **fie
 
 <br />
 
-> Attention: There is another great *software/tutorial* provided by [Diego Gris](https://www.linkedin.com/in/diego-gris/) called **draw-plots-qgis** with some other ways to biuld *grig_shapefiles*, check it at: [https://github.com/diegojgris/draw-plots-qgis](https://github.com/diegojgris/draw-plots-qgis) 
+> **Attention:** There is another great *software/tutorial* provided by [Diego Gris](https://www.linkedin.com/in/diego-gris/) called **`draw-plots-qgis`** with some other ways to biuld *grig_shapefiles*, check it at: [https://github.com/diegojgris/draw-plots-qgis](https://github.com/diegojgris/draw-plots-qgis)
+
+* Option-01: Draw_plots_from_Excel
+* Option-02: Draw_plots_from_clicks
+* Option-03: Draw_plots_from_points
+* Option-04: Draw_plots_from_polygons
 
 <br />
 
 [Menu](#menu)
 
-<div id="p1" />
+<div id="p5" />
 
 ---------------------------------------------
-### Installation
+### Building vegetation indices
 
-Start the pipeline by installing the software:
+A general number of indices are implemented in *FIELDimageR-QGIS* using the function **`fieldIndex`**. Also, you can build your own index using the parameter `myIndex`. 
 
+<br />
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/filipematias23/images/master/readme/F6ind3.jpeg">
+</p>
 
+<br />
 
+Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'.
 
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_14.jpg">
+</p>
 
+<br />
+
+To better visualize specific vegetation index you can coloring it by doing a duble click at **Index layer** and folow the steps below:
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_15.jpg">
+</p>
+
+<br />
+
+Multispectral images also can be used. For instance, it is important to write the right order of layers, for example **Blue,Green,Red,RE,NIR**. It must be write 'RE' and NOT 'RedEdge'. You can download one example of **Multispectral** here: [**EX1_5Band.tif**](https://drive.google.com/open?id=1vYb3l41yHgzBiscXm_va8HInQsJR1d5Y)
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_16.jpg">
+</p>
+
+<br />
 
 
