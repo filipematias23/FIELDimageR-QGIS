@@ -474,6 +474,13 @@ Attention: The plots are identified in ascending order from left to right and bo
 <div id="contact" />
 
 ---------------------------------------------
+### More information about **FIELDimageR**:
+
+* [FIELDimageR R package](https://github.com/OpenDroneMap/FIELDimageR)
+* [FIELDimageR.Extra R package](https://github.com/filipematias23/FIELDimageR.Extra)
+
+<br />
+
 ### Google Groups Forum
 
 > This discussion group provides an online source of information about the FIELDimageR package. Report a bug and ask a question at: 
