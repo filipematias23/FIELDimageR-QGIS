@@ -1,0 +1,8 @@
+{"ALG_DESC": "Crop each plot and associate it with a ID and store it according to the user specification.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic with layers data to be cropped.",
+  "grid_shapefile_layer": "Grid plot shape file layer to be used as reference, please use the function fieldShape.",
+  "plotID": "Optional - Column name on fieldShape with the desired plots identification. If NULL plots will be saved in sequence according to the field map.",
+  "classifier": "Optional - Column name on fieldShape with levels to create folders at 'output_dir' directory. Cropped plots will be sorted and stored on related folders. If NULL all plots will be saved at the working directory.",
+  "format": "Save plots as '.tif' (by default) or '.jpg'.",
+  "output_dir": "Directory to save cropped plot images. Default is the working directory."}
