@@ -29,7 +29,7 @@
 
 [Step 9. Estimating object area percentage (e.g. canopy and LAI)](#p9) 
 
-[Step 10. Counting the number of objects (e.g. plants)](#p10)
+[Step 10. Counting the number of objects and taking measurements (e.g. stand count, plants, etc.)](#p10)
 
 [Step 11. Saving output files](#p11)
 
@@ -421,10 +421,10 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 [Menu](#menu)
 
-<div id="p7" />
+<div id="p10" />
 
 ---------------------------------------------
-#### 6. Counting the number of objects (e.g. plants, seeds, etc)
+#### Counting the number of objects and taking measurements (e.g. stand count, plants, etc.)
 
 > *FIELDimageR-QGIS* can be used to evaluate stand count during early stages. A good weed control practice should be performed to avoid misidentification inside the plot.  The *mask* output from **`fieldMask`** and the *fieldshape* output from **`fieldShape`** must be used. Function to use: **`fieldCount`**.
 
