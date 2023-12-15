@@ -1,0 +1,7 @@
+{"ALG_DESC": "Calculating number of objects per plot and taking measurements.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mask_layer": "Input mask raster layer from the function fieldMask.",
+  "grid_shapefile_layer": "Grid plot shape file layer to be used as reference, please use the function fieldShape.",
+  "output_patches": "Output is a raster with individual objects identified. 'Patches' are groups of cells that are surrounded by NA cells creating an object.",
+  "output_count_plot": "Output is a new shapeFile with objects in the plot area, perimeter, count, and mean_width.",
+  "output_count_object": "Output is a new shapeFile of single objects area, perimeter, width, x and y position."}
