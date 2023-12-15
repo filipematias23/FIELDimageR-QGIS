@@ -29,9 +29,11 @@
 
 [Step 9. Estimating object area percentage (e.g. canopy and LAI)](#p9) 
 
-[Step 10. Saving output files](#p10)
+[Step 10. Counting the number of objects (e.g. plants)](#p10)
 
-[Step 11. Cropping individual plots and saving](#p11)
+[Step 11. Saving output files](#p11)
+
+[Step 12. Cropping individual plots and saving](#p12)
 
 [Contact](#contact)
 
@@ -419,7 +421,32 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 [Menu](#menu)
 
-<div id="p10" />
+<div id="p7" />
+
+---------------------------------------------
+#### 6. Counting the number of objects (e.g. plants, seeds, etc)
+
+> *FIELDimageR-QGIS* can be used to evaluate stand count during early stages. A good weed control practice should be performed to avoid misidentification inside the plot.  The *mask* output from **`fieldMask`** and the *fieldshape* output from **`fieldShape`** must be used. Function to use: **`fieldCount`**.
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_38a.jpg">
+</p>
+
+<br />
+
+This function generates:
+ * New shapeFile with objects in the **PLOT** (data per plot in the grid: area, perimeter, count, and mean_width).
+ * New shapeFile of single **OBJECTS** (data per object: area, perimeter, width, x and y position).
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_38b.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p11" />
 
 ---------------------------------------------
 ### Saving output files
@@ -442,7 +469,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 [Menu](#menu)
 
-<div id="p11" />
+<div id="p12" />
 
 ---------------------------------------------
 ### Cropping individual plots and saving
