@@ -1,0 +1,8 @@
+{"ALG_DESC": "Clustering pixels using kmeans algorithm.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic.",
+  "clusters": "Number of clusters to sort pixels (Default = 2).",
+  "iteration": "Number of iterations (Default = 500).",
+  "algorithm": "kmeans algorithm. Options: Lloyd, Hartigan-Wong, Forgy, and MacQueen (Default = Lloyd).",
+  "seed": "set.seed (Default = 25).",
+  "output_kmean": "Output raster layer with Kmeans segmented clusters."}
