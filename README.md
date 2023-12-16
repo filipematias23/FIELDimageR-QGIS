@@ -37,6 +37,8 @@
 
 [Step 13. Image segmentation based on Kmeans (Unsupervised)](#p13)
 
+[Step 14. Image segmentation based on machine learning models as Random Forest (Supervised)](#p14)
+
 [Contact](#contact)
 
 <div id="instal" />
@@ -473,6 +475,35 @@ This function generates:
 
 [Menu](#menu)
 
+<div id="p12" />
+
+---------------------------------------------
+### Cropping individual plots and saving
+
+> Many times when developing algorithms it is necessary to crop the mosaic using the plot fieldShape as a reference and sort/store cropped plot images on specific folders. For instance, the function **`fieldCropGrid`** allows cropping plots and identification by 'plotID'. The user also can save each plot according to a 'classifier' logic (Attention: a column in the 'fieldShape' with the desired classification must be informed). In the example below, each plot in the **'EX1_RGB'** mosaic is being cropped according to the **'grid_shape'** shapefile, identified by the information in the **'plot'** column, and stored/saved in specific folders with different levels of **Maturity** as **'classifier'**.
+
+<br />
+
+**Attention:** There is **NO** output returned to QGIS. All cropped plots will be saved in the **output_directory**.
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_36.jpg">
+</p>
+
+<br />
+
+> Checking cropped plots **.jpg** classified in each Maturity level folder: 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_37a.jpg" width="70%" height="70%">
+</p>
+
+<br />
+
+[Menu](#menu)
+
 <div id="p13" />
 
 ---------------------------------------------
@@ -500,29 +531,57 @@ This function generates:
 
 [Menu](#menu)
 
-<div id="p12" />
+<div id="p14" />
 
 ---------------------------------------------
-### Cropping individual plots and saving
+### Image segmentation based on machine learning models as Random Forest (Supervised)
 
-> Many times when developing algorithms it is necessary to crop the mosaic using the plot fieldShape as a reference and sort/store cropped plot images on specific folders. For instance, the function **`fieldCropGrid`** allows cropping plots and identification by 'plotID'. The user also can save each plot according to a 'classifier' logic (Attention: a column in the 'fieldShape' with the desired classification must be informed). In the example below, each plot in the **'EX1_RGB'** mosaic is being cropped according to the **'grid_shape'** shapefile, identified by the information in the **'plot'** column, and stored/saved in specific folders with different levels of **Maturity** as **'classifier'**.
-
-<br />
-
-**Attention:** There is **NO** output returned to QGIS. All cropped plots will be saved in the **output_directory**.
+> **FIELDimageR-QGIS** has one function called **`fieldSegment`** that uses samples of images and machine learning algorithms for pixel classification (Supervised method). There are two models included Random Forest (default) and cart. Initially, users need to create training samples by creating a **Polygon Layer** (example below) or **Point Layer** to digitize spatial object (e.g. soil, plant, shadow etc.). For instance, users need to utilize the draw polygon or draw rectangle tool. 
 
 <br />
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_36.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_41.jpg">
 </p>
 
 <br />
 
-> Checking cropped plots **.jpg** classified in each Maturity level folder: 
+> Selected training samples by creating polygons representing CLASS="soil" and CLASS="plant":
+
+<br />
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_37a.jpg" width="70%" height="70%">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_42.jpg">
+</p>
+
+<br />
+
+> Checking **Attribute Table** IDs and CLASS columns according to the selected training samples:
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_43.jpg">
+</p>
+
+<br />
+
+> After creating the training dataset, the function is very simple and intuitive to use:
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_44.jpg">
+</p>
+
+<br />
+
+> Checking segmentation results based on the selected training samples:
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_45.jpg" width="70%" height="70%">
 </p>
 
 <br />
