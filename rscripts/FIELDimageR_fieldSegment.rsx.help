@@ -1,0 +1,8 @@
+{"ALG_DESC": "Clustering pixels using kmeans algorithm.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic.",
+  "training_dataset": "Polygons layer with different features like plant, soil, shadows, etc. Attributes must be filled with the name of each feature class.",
+  "sample_points": "Number of selected points per polygon (Default = 200).",
+  "algorithm": "Machine learning models for classification objects in the mosaic based on samples. There are two options the model Randon Forest and Cart.",
+  "seed": "set.seed (Default = 5).",
+  "output_segment": "Output raster layer with segmented clusters."}
