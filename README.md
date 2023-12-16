@@ -35,6 +35,8 @@
 
 [Step 12. Cropping individual plots and saving](#p12)
 
+[Step 13. Image segmentation based on Kmeans (Unsupervised)](#p13)
+
 [Contact](#contact)
 
 <div id="instal" />
@@ -465,6 +467,33 @@ This function generates:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_32.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p13" />
+
+---------------------------------------------
+### Image segmentation based on K-means (unsupervised)
+
+> **FIELDimageR-QGIS** introduce the function **`fieldKmeans`** that uses the K-means unsupervised method for image segmentation. This function clusters pixels on the number of clusters decided by the user. Each cluster can be associated with plants, soil, shadows, etc.
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_39.jpg">
+</p>
+
+<br />
+
+> **Attention:** Each image/mosaic will have different cluster numbers representing plants or soil. In this example, cluster_01 is plants and cluster_02 is soil.
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_40.jpg" width="70%" height="70%">
 </p>
 
 <br />
