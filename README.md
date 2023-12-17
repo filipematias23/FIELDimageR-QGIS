@@ -314,6 +314,8 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**:
 
+* Attention: You need to save the output_mosaic in a folder (Do not forget to save it otherwise the function will not save the cropped new mosaic) !!!
+
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_21.jpg">
 </p>
