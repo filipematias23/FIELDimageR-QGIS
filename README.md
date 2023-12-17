@@ -281,7 +281,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'.
 
-* Attention: You need to save the output_index in a folder (Do not forget to save it otherwise the function doesn´t work) !!!
+* Attention: You need to write a name as **'Index.tif'** or save the **output_index** in a folder (Do not forget to write/save it otherwise the function doesn´t work) !!!
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_14.jpg">
@@ -314,7 +314,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**:
 
-* Attention: You need to save the output_mosaic in a folder (Do not forget to save it otherwise the function will not save the cropped new mosaic) !!!
+* Attention: You need to write a name as **'NewMosaic.tif'** or save the output_mosaic in a folder (Do not forget to write/save it otherwise the function will not save the cropped new mosaic) !!!
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_21.jpg">
