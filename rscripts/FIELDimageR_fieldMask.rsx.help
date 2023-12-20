@@ -4,5 +4,6 @@
   "index_layer": "Input raster layer with vegetation indices to be used as reference to calculate the mask.",
   "mask_layer_name": "Vegetation index name from inputed 'index_layer' to be used as reference on creating the mask.",
   "mask_crop_values": "Pixel value to be used as reference on applying the mask (e.g., soil value in the image).",
+  "crop_above": "If TRUE (check) all values above the mask_crop_values will be accounted to make the mask.",
   "output_mask": "Output mask with logical values of 0 and 1 for vegetation or soil.",
   "output_mosaic": "Output raster layer with the original bands (layers) without the background."}
