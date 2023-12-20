@@ -53,6 +53,10 @@
 
 <br />
 
+* **Attention:** The first time running FIELDimageR-QGIS may takes time for installing all R packages!
+
+<br />
+
 > Make sure to open the **Processing Toolbox** visualization in **QGIS**:
 
 * (1) View 
