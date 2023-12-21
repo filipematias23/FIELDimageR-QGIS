@@ -316,7 +316,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 ---------------------------------------------
 ### Removing the soil effect based on image segmentation
 
-> The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**:
+> The traditional way to remove soil effect by image segmentation called *Thresholding Method* was implemented in the function **`fieldMask`**. Users can choose the *mask_layer_name* (vegetation index from **fieldIndex**), the crop_value, and if the cropping must be above (TRUE) or below (FALSE) the thresholding value.
 
 * Attention: You need to write a name as **'NewMosaic.tif'** or save the output_mosaic in a folder (Do not forget to write/save it otherwise the function will not save the cropped new mosaic) !!!
 
