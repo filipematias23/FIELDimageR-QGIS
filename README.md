@@ -438,20 +438,28 @@ Attention: The plots are identified in ascending order from left to right and bo
 ---------------------------------------------
 #### Counting the number of objects and taking measurements (e.g. stand count, plants, etc.)
 
-> *FIELDimageR-QGIS* can be used to evaluate stand count during early stages. A good weed control practice should be performed to avoid misidentification inside the plot.  The *mask* output from **`fieldMask`** and the *fieldshape* output from **`fieldShape`** must be used. Function to use: **`fieldCount`**.
+> *FIELDimageR-QGIS* can be used to evaluate stand count during early stages. A good weed control practice should be performed to avoid misidentification inside the plot.  The *mosaic_NoSoil* (or output_NewMosaic) output from **`fieldMask`** and the *grid_fieldshape* output from **`fieldShape`** must be used. Function to use: **`fieldCount`**.
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_38a.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_46.jpg">
 </p>
 
 <br />
 
 This function generates:
- * New shapeFile with objects in the **PLOT** (data per plot in the grid: area, perimeter, count, and mean_width).
- * New shapeFile of single **OBJECTS** (data per object: area, perimeter, width, x and y position).
+ * New shapeFile with objects in the **PLOT** (Attention: ***total, mean, var, sd*** data per plot will be calculated in the grid for ***count, area, perimeter, and width***).
+ * New shapeFile of single **OBJECTS** (Attention: The data per object is ***area, perimeter, width, x and y position***).
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_38b.jpg">
+</p>
+
+<br />
+
+> The **WATERSHED** algorithm from [EBImage-R-package](https://bioconductor.org/packages/release/bioc/html/EBImage.html) can be used to identify objects by typing a tolerance value. We suggest using **0 or 1** for initial investigations. 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_47.jpg">
 </p>
 
 <br />
@@ -660,6 +668,12 @@ This function generates:
 > * [OpenDroneMap](https://www.opendronemap.org/)
 > * [Phenome-Force Channel](https://youtube.com/@phenomeforce6569)
 > * [r-spatial community](https://github.com/r-spatial)
+
+### References
+
+> * [r-package-terra](https://cran.r-project.org/web/packages/terra/index.html)
+> * [r-package-sf](https://cran.r-project.org/web/packages/sf/index.html)
+> * [r-package-EBImage](https://bioconductor.org/packages/release/bioc/html/EBImage.html)
 
 <br />
 
