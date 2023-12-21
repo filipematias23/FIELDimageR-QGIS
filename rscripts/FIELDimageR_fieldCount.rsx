@@ -44,8 +44,18 @@ mosaic<-mosaic[[1]]
     c<-st_join(fieldShape, st_as_sf(attributes))
      print(c)
     all<- c%>% group_by(ID) %>% 
-      summarize(area =round(sum(area),3),
-                perimeter=round(sum(perimeter),3),count=n(),mean_width=round(mean(width),3))
+      summarize(count=n(),
+              area_total =round(sum(area),3),
+              area_mean =round(mean(area),3),
+              area_var =round(var(area),3),
+              area_sd =round(sd(area),3),
+              perimeter_total =round(sum(perimeter),3),
+              perimeter_mean =round(mean(perimeter),3),
+              perimeter_var =round(var(perimeter),3),
+              perimeter_sd =round(sd(perimeter),3),
+              width_mean =round(mean(width),3),
+              width_var =round(var(width),3),
+              width_sd =round(sd(width),3))
     print(all)
     all_attri<-list(plot_level=all,
                     object_level=att)
@@ -64,8 +74,18 @@ mosaic<-mosaic[[1]]
     c<-st_join(fieldShape, st_as_sf(attributes))
     print(c)
     all<- c%>% group_by(ID.x) %>% 
-      summarize(area =round(sum(area),3),
-                perimeter=round(sum(perimeter),3),count=n(),mean_width=round(mean(width),3))
+      summarize(count=n(),
+              area_total =round(sum(area),3),
+              area_mean =round(mean(area),3),
+              area_var =round(var(area),3),
+              area_sd =round(sd(area),3),
+              perimeter_total =round(sum(perimeter),3),
+              perimeter_mean =round(mean(perimeter),3),
+              perimeter_var =round(var(perimeter),3),
+              perimeter_sd =round(sd(perimeter),3),
+              width_mean =round(mean(width),3),
+              width_var =round(var(width),3),
+              width_sd =round(sd(width),3))
     print(all)
     all_attri<-list(plot_level=all,
                     object_level=attributes)
