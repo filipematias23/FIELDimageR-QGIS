@@ -303,7 +303,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > Multispectral images also can be used. For instance, it is important to write the right order of layers, for example **Blue,Green,Red,RE,NIR**. It must be write 'RE' and NOT 'RedEdge'. You can download one example of **Multispectral** here: [**EX1_5Band.tif**](https://drive.google.com/open?id=1vYb3l41yHgzBiscXm_va8HInQsJR1d5Y)
 
-**Attention:** In case of images/mosaics with more than 5 bands, it is important to type the desired order of layers. The names **Blue,Green,Red,RE,NIR** are obligatory. For example, if the mosaic had 10 bands the user can type:
+**Attention:** In case of images/mosaics with more than 5 bands, it is important to type the desired order of layers. The names **Blue,Green,Red,RE,NIR** are obligatory. The vegetation indices will be calculate according to the equations described in the table above. For example, if the mosaic has 10 bands the user can type (suggestions):
 
 * (i)	**Blue,Green,Red,RE,NIR**,6,7,8,9,10
 
