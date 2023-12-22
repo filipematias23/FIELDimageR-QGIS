@@ -303,6 +303,17 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 > Multispectral images also can be used. For instance, it is important to write the right order of layers, for example **Blue,Green,Red,RE,NIR**. It must be write 'RE' and NOT 'RedEdge'. You can download one example of **Multispectral** here: [**EX1_5Band.tif**](https://drive.google.com/open?id=1vYb3l41yHgzBiscXm_va8HInQsJR1d5Y)
 
+**Attention:** In case of images/mosaics with more than 5 bands, it is important to type the desired order of layers. The names **Blue,Green,Red,RE,NIR** are obligatory. For example, if the mosaic had 10 bands the user can type:
+
+* (i)	**Blue,Green,Red,RE,NIR**,6,7,8,9,10
+
+* (ii)	Band1,**Blue**, Band 2, **Green**, Band 3,**Red**, Band 4,**RE**, Band 5,**NIR**
+
+* (iii)	**Blue,Green,Red**,ban4, ban5, ban6, ban7, ban8,**RE,NIR**
+
+* (iv)	Etc.
+
+
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_16.jpg">
 </p>
