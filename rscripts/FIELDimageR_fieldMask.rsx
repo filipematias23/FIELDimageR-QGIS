@@ -20,7 +20,7 @@ if (any(!indice%in%names(index))) {
 }
 
 if(crop_above){
-mask <- ifel(index[[indice]]> mask_crop_values,NA,1)
+mask <- ifel(index[[indice]]> mask_crop_values,1,NA)
 }
 
 if(!crop_above){
