@@ -3,7 +3,7 @@
 ##index_layer=raster
 ##mask_layer_name=string HUE
 ##mask_crop_values=number 0
-##crop_above=boolean TRUE
+##crop_above=boolean FALSE
 ##output_mask=output raster
 ##output_mosaic=output raster
 
