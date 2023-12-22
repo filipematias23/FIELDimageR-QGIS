@@ -15,9 +15,9 @@ mosaic <- rast(mosaic_layer)
 index<-rast(index_layer)
 indice<-mask_layer_name
 print(indice)
-nBand <- nlyr(mosaic)
+nBand <- nlyr(index)
 if(nBand==1){
-  names(index[[1]])<-indice
+  names(index[[1]])<-as.character(indice)
 }
 if (any(!indice%in%names(index))) {
   stop("Selected indices are not available in FIELDimageR")
