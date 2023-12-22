@@ -3,7 +3,7 @@
 ##index_layer=raster
 ##mask_layer_name=string HUE
 ##mask_crop_values=number 0
-##crop_above=boolean FALSE
+##crop_above=boolean TRUE
 ##output_mask=output raster
 ##output_mosaic=output raster
 
@@ -20,11 +20,11 @@ if (any(!indice%in%names(index))) {
 }
 
 if(crop_above){
-mask <- ifel(index[[indice]]> mask_crop_values,1,NA)
+mask <- ifel(index[[indice]]> mask_crop_values,NA,1)
 }
 
 if(!crop_above){
-mask <- ifel(index[[indice]]< mask_crop_values,1,NA)
+mask <- ifel(index[[indice]]> mask_crop_values,1,NA)
 }
 
 names(mask)<-'mask'
