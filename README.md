@@ -549,7 +549,7 @@ This function generates:
 <br />
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_40.jpg" width="70%" height="70%">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_40.jpg" width="90%" height="90%">
 </p>
 
 <br />
