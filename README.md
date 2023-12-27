@@ -611,6 +611,16 @@ This function generates:
 
 <br />
 
+> The **Output_Segment** *(Plants = 1 and Soil = 2)* can be used to remove soil pixels by applying it as the **Index_Layer** input at the *fieldMasck()* function to crop the RGB image according to the selected criteria. In the example below, we cropped all pixels above 1.5 to eliminate the soil and select all plants. Remember to write '**Band 1**' as *Mask_Layer_Name*:
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_48.jpg" width="70%" height="70%">
+</p>
+
+<br />
+
 [Menu](#menu)
 
 <div id="contact" />
