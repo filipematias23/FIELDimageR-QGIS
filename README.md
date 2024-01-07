@@ -273,7 +273,7 @@ Attention: The plots are identified in ascending order from left to right and bo
 ---------------------------------------------
 ### Building vegetation indices
 
-> A general number of indices are implemented in *FIELDimageR-QGIS* using the function **`fieldIndex`**.  
+> A general number of indices are implemented in *FIELDimageR-QGIS* using the function **`fieldIndex`**. 
 
 <br />
 
@@ -283,12 +283,12 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <br />
 
-> Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'.
+> Calculating vegetation indices is very simple. Users must provide the sequence of bands/wavelength avaliable in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'Green' and NOT 'green'. Users also can calculate any other index not provided in the table above by using the box **`MyIndex`**. Just type each index equation separated by "," (comma).
 
 * Attention: You need to write a name as **'Index.tif'** or save the **output_index** in a folder (Do not forget to write/save it otherwise the function doesn´t work) !!!
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_14.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_14a.jpg">
 </p>
 
 <br />
