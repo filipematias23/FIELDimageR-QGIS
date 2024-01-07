@@ -2,6 +2,7 @@
 ##mosaic_layer=raster
 ##bands=string Red,Green,Blue
 ##index=string HUE,BI,GLI,NGRDI
+##My_index=optional string (Red-Blue)/Green,Red/Green
 ##output_index=output raster
 
 # Get input parameters from QGIS
@@ -16,20 +17,20 @@ names(mosaic) <- bands
 
 # Extract individual bands
 if(num.band ==3){
-B <- mosaic['Blue']
-G <- mosaic['Green']
-R <- mosaic['Red']
+Blue <- mosaic['Blue']
+Green <- mosaic['Green']
+Red <- mosaic['Red']
 }else if(num.band ==4){
-B <- mosaic['Blue']
-G <- mosaic['Green']
-R <- mosaic['Red']
+Blue <- mosaic['Blue']
+Green <- mosaic['Green']
+Red <- mosaic['Red']
 RE<-mosaic['RE']
 }else{
-B <- mosaic['Blue']
-G <- mosaic['Green']
-R <- mosaic['Red']
+Blue <- mosaic['Blue']
+Green <- mosaic['Green']
+Red <- mosaic['Red']
 RE<-mosaic['RE']
-NIR1<-mosaic['NIR']
+NIR<-mosaic['NIR']
 }
 if (num.band < 3) {
   stop("At least 3 bands (RGB) are necessary to calculate indices")
@@ -39,11 +40,11 @@ if (num.band < 3) {
 Ind <- data.frame(
   index = c("BI", "BIM", "SCI", "GLI", "HI", "NGRDI", "SI", "VARI", "HUE", "BGI", 
             "PSRI", "NDVI", "GNDVI", "RVI", "NDRE", "TVI", "CVI", "CIG", "CIRE", "DVI", "EVI"),
-  eq = c("sqrt((R^2+G^2+B^2)/3)", "sqrt((R*2+G*2+B*2)/3)", "(R-G)/(R+G)", "(2*G-R-B)/(2*G+R+B)", 
-         "(2*R-G-B)/(G-B)", "(G-R)/(G+R)", "(R-B)/(R+B)", "(G-R)/(G+R-B)", "atan(2*(B-G-R)/30.5*(G-R))", "B/G", 
-         "(R-G)/(RE)", "(NIR1-R)/(NIR1+R)", "(NIR1-G)/(NIR1+G)", "NIR1/R", "(NIR1-RE)/(NIR1+RE)", 
-         "(0.5*(120*(NIR1-G)-200*(R-G)))", "(NIR1*R)/(G^2)", "(NIR1/G)-1", "(NIR1/RE)-1", "NIR1-RE", 
-         "2.5*(NIR1-R)/(NIR1+6*R-7.5*B+1)"),
+  eq = c("sqrt((Red^2+Green^2+Blue^2)/3)", "sqrt((Red*2+Green*2+Blue*2)/3)", "(Red-Green)/(Red+Green)", "(2*Green-Red-Blue)/(2*Green+Red+Blue)", 
+         "(2*Red-Green-Blue)/(Green-Blue)", "(Green-Red)/(Green+Red)", "(Red-Blue)/(Red+Blue)", "(Green-Red)/(Green+Red-Blue)", "atan(2*(Blue-Green-Red)/30.5*(Green-Red))", "Blue/Green", 
+         "(Red-Green)/(RE)", "(NIR-Red)/(NIR+Red)", "(NIR-Green)/(NIR+Green)", "NIR/Red", "(NIR-RE)/(NIR+RE)", 
+         "(0.5*(120*(NIR-Green)-200*(Red-Green)))", "(NIR*Red)/(Green^2)", "(NIR/Green)-1", "(NIR/RE)-1", "NIR-RE", 
+         "2.5*(NIR-Red)/(NIR+6*Red-7.5*Blue+1)"),
   band = c("C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "RE", "NIR", "NIR", "NIR", "NIR", "NIR", 
            "NIR", "NIR", "NIR", "NIR", "NIR")
 )
@@ -73,8 +74,27 @@ new_layers <- list()
 
 for (i in 1:length(selected_indices)) {
   new_layer <- eval(parse(text = as.character(Ind$eq[Ind$index == selected_indices[i]])))
-  new_layers[[selected_indices[i]]] <- new_layer
+  new_layers[[as.character(selected_indices[i])]] <- new_layer
 }
-mosaic<-rast(new_layers)
+
+indices <- rast(new_layers)
+
+My_index <- strsplit(gsub("\\s", "", My_index), ",")[[1]]
+print(My_index)
+
+my_layers <- list()
+if (length(My_index) > 0) {
+  for (i in 1:length(My_index)) {
+    my_layer <- eval(parse(text = as.character(My_index)[i]))
+    my_layers[[My_index[i]]] <- my_layer
+  }
+  myindex <- rast(my_layers)
+  names(myindex) <- paste0("Myindex_", 1:length(My_index))
+  mosaic <- c(indices, myindex)
+} else {
+  mosaic <- indices
+}
+
+
 # Write the raster to disk
 output_index <- mosaic
