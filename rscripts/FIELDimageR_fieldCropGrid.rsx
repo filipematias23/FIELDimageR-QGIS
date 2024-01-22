@@ -58,12 +58,12 @@ nBand <- nlyr(mosaic)
     }
     if (nchar(trimws(format)) == 0 && nchar(trimws(plotID)) == 0 && nchar(trimws(classifier)) == 0) {
       grid_polygon <- st_transform(grid_polygon, crs = st_crs(stars_object))
-      plot_raster <-terra::crop(stars_object, grid_polygon)
+      plot_raster <-terra::crop(stars_object, grid_polygon,mask=TRUE)
       terra::writeRaster(plot_raster, file_path)
     }
     else if (format == ".jpg") {
       grid_polygon <- st_transform(grid_polygon, crs = st_crs(stars_object))
-      plot_raster <- terra::crop(stars_object, grid_polygon)
+      plot_raster <- terra::crop(stars_object, grid_polygon,mask=TRUE)
       if (nBand > 2) {
         if (as.numeric(minmax(plot_raster[[1]])[[2]] > 
                        1)) {
@@ -90,7 +90,7 @@ nBand <- nlyr(mosaic)
     }
     else {
       grid_polygon <- st_transform(grid_polygon, crs = st_crs(stars_object))
-      plot_raster <- terra::crop(stars_object, grid_polygon)
+      plot_raster <- terra::crop(stars_object, grid_polygon,mask=TRUE)
       terra::writeRaster(plot_raster, file_path)
     }
     
