@@ -14,6 +14,7 @@ mosaic <- rast(mosaic_layer)
 num.band <- nlyr(mosaic)
 print(bands)
 bands <- strsplit(bands, ",")[[1]]
+if(length(bands)<num.band){bands<-c(bands,paste("Extra_",seq(1:(num.band-length(bands))),sep=""))}
 names(mosaic) <- bands
 
 # Extract individual bands
