@@ -12,25 +12,25 @@ library(dplyr)
 # Load the raster layer
 mosaic <- rast(mosaic_layer)
 num.band <- nlyr(mosaic)
+print(bands)
 bands <- strsplit(bands, ",")[[1]]
 names(mosaic) <- bands
 
 # Extract individual bands
-if(num.band ==3){
-Blue <- mosaic['Blue']
-Green <- mosaic['Green']
-Red <- mosaic['Red']
-}else if(num.band ==4){
-Blue <- mosaic['Blue']
-Green <- mosaic['Green']
-Red <- mosaic['Red']
-RE<-mosaic['RE']
-}else{
-Blue <- mosaic['Blue']
-Green <- mosaic['Green']
-Red <- mosaic['Red']
-RE<-mosaic['RE']
-NIR<-mosaic['NIR']
+if(any(names(mosaic)=="Blue")){
+  Blue <- mosaic['Blue']
+}
+if(any(names(mosaic)=="Red")){
+  Red <- mosaic['Red']
+}
+if(any(names(mosaic)=="Green")){
+  Green <- mosaic['Green']
+}
+if(any(names(mosaic)=="RE")){
+  RE <- mosaic['RE']
+}
+if(any(names(mosaic)=="NIR")){
+  NIR<- mosaic['NIR']
 }
 if (num.band < 3) {
   stop("At least 3 bands (RGB) are necessary to calculate indices")
