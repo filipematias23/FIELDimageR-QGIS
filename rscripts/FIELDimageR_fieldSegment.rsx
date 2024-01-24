@@ -38,7 +38,7 @@ test$class <- as.factor(test$class)
 train <- na.omit(train)
 test <- na.omit(test)
 
-x <- train[, 2:(ncol(train) - 1)]
+x <- train[, 2:(ncol(train) - 1),drop=FALSE]
 y <- train$class
 
 set.seed(seed)
