@@ -24,7 +24,10 @@ points_layer <- st_as_sf(points_layer)
 
 # Load the raster layer
 mosaic <- rast(mosaic_layer)
-
+if(st_crs(points_layer)!= st_crs(mosaic)){
+points_layer=points_layer%>%st_transform(st_crs(mosaic))
+}
+print(st_crs(points_layer))
 # Set the number of rows and columns for the grid
 if (length(points_layer$geometry) == 4) {
   

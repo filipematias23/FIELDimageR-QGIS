@@ -14,7 +14,13 @@ library(randomForest)
 library(sf)
 
 mosaic<-rast(mosaic_layer)
-if(unique(as.character(st_geometry_type(training_dataset)))=='POLYGON'){
+
+if(st_crs(training_dataset)!= st_crs(mosaic)){
+training_dataset=training_dataset%>%st_transform(st_crs(mosaic))
+}
+colnames(training_dataset)<-tolower(colnames(training_dataset))
+
+if((unique(as.character(st_geometry_type(training_dataset)))=='POLYGON')||(unique(as.character(st_geometry_type(training_dataset)))=='MULTIPOLYGON')){
 trainDataset<-spatSample(vect(st_as_sf(training_dataset)), sample_points, method="random")
 }else{
 trainDataset<-st_as_sf(training_dataset)
