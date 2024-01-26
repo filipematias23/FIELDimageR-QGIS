@@ -1,7 +1,10 @@
 ##FIELDimageR=group
 ##num_rows=number 10
 ##num_cols=number 10
-##points_layer=vector point 
+##first_point_at_left_superior_corner=point 
+##second_point_at_right_superior_corner=point 
+##third_point_at_right_inferior_corner=point 
+##fourth_point_at_left_inferior_corner=point 
 ##mosaic_layer=raster
 ##buffer=optional number
 ##x_plot_size=optional number 
@@ -18,16 +21,14 @@ num_cols <- as.numeric(num_cols)
 library(sf)
 library(terra)
 library(dplyr)
-
 # Convert points_layer to sf format
-points_layer <- st_as_sf(points_layer)
-
+points_layer <- c(first_point_at_left_superior_corner,second_point_at_right_superior_corner,third_point_at_right_inferior_corner,fourth_point_at_left_inferior_corner)
+df <- data.frame(id = c(1, 2, 3, 4))
+points_layer<-st_sf(df,geometry=points_layer)
+print(points_layer)
 # Load the raster layer
 mosaic <- rast(mosaic_layer)
-if(st_crs(points_layer)!= st_crs(mosaic)){
-points_layer=points_layer%>%st_transform(st_crs(mosaic))
-}
-print(st_crs(points_layer))
+
 # Set the number of rows and columns for the grid
 if (length(points_layer$geometry) == 4) {
   
@@ -35,8 +36,8 @@ if (length(points_layer$geometry) == 4) {
   
   point_shp <- st_cast(st_make_grid(points_layer, n = c(1, 1)), "POINT")
   
-  sourcexy <- rev(point_shp[1:4]) %>% st_transform(st_crs(mosaic))
-  Targetxy <- points_layer %>% st_transform(st_crs(mosaic))
+  sourcexy <- rev(point_shp[1:4])%>% st_transform(st_crs(mosaic)) 
+  Targetxy <- points_layer%>% st_transform(st_crs(mosaic)) 
   
   controlpoints <- as.data.frame(cbind(st_coordinates(sourcexy), st_coordinates(Targetxy)))
   
