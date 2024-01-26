@@ -162,32 +162,12 @@
 ---------------------------------------------
 ### Building the plot shapefile
 
-> FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape**. The function starts by creating a layer with four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom).
-
-<p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_3.jpg">
-</p>
-
-<br />
-
-<p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_4.jpg">
-</p>
-
-<br />
-
-<p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_5.jpg">
-</p>
-
-<br />
-
-> After creating the **point_shape** layer dubleclick on **`fieldShape`** function at the **Processing Toolbox > R > FIELDimageR > fieldShape** and follow the steps below to creat a basic *grid_shapefile*. For instance, the number of columns and rows must be informed:
+> FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape** at the **Processing Toolbox > R > FIELDimageR > fieldShape** to creat a basic *grid_shapefile*. The function starts by setting four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom). The next step is provide the number of columns and rows.
 
 Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
 <p align="center">
-  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_6.jpg">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_6a.jpg">
 </p>
 
 <br />
