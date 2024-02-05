@@ -19,19 +19,19 @@ names(mosaic) <- bands
 
 # Extract individual bands
 if(any(names(mosaic)=="Blue")){
-  Blue <- mosaic['Blue']
+  mosaic[["Blue"]] <- mosaic[["Blue"]]
 }
 if(any(names(mosaic)=="Red")){
-  Red <- mosaic['Red']
+   mosaic[["Red"]] <- mosaic[["Red"]]
 }
 if(any(names(mosaic)=="Green")){
-  Green <- mosaic['Green']
+  mosaic[["Green"]] <- mosaic[['Green']]
 }
 if(any(names(mosaic)=="RE")){
-  RE <- mosaic['RE']
+  mosaic[["RE"]] <- mosaic[["RE"]]
 }
 if(any(names(mosaic)=="NIR")){
-  NIR<- mosaic['NIR']
+  mosaic[["NIR"]]<- mosaic[["NIR"]]
 }
 if (num.band < 3) {
   stop("At least 3 bands (RGB) are necessary to calculate indices")
@@ -74,7 +74,8 @@ if (any(NIR.RE %in% index) && all(bands %in% 'NIR')) {
 new_layers <- list()
 
 for (i in 1:length(selected_indices)) {
-  new_layer <- eval(parse(text = as.character(Ind$eq[Ind$index == selected_indices[i]])))
+  fun <- function(Red,Green,Blue,RE,NIR){eval(parse(text = as.character(Ind$eq[Ind$index == selected_indices[i]])))}
+  new_layer<-lapp(mosaic,fun,usenames=TRUE)
   new_layers[[as.character(selected_indices[i])]] <- new_layer
 }
 
@@ -86,7 +87,8 @@ print(My_index)
 my_layers <- list()
 if (length(My_index) > 0) {
   for (i in 1:length(My_index)) {
-    my_layer <- eval(parse(text = as.character(My_index)[i]))
+    fun1 <- function(Red, Green,Blue,RE,NIR){eval(parse(text = as.character(Ind$eq[Ind$index == selected_indices[i]])))}
+    my_layer <- lapp(mosaic,fun1,usenames=TRUE)
     my_layers[[My_index[i]]] <- my_layer
   }
   myindex <- rast(my_layers)
