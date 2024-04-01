@@ -17,7 +17,7 @@
 
 [Step 3. Building the plot shapefile](#p3)
 
-[Step 4. Editing the plot shapefile](#p4)
+[Step 4. Editing the plot shapefile and raster (e.g. move, rotate, scale, etc.)](#p4)
 
 [Step 5. Building vegetation indices](#p5)
 
@@ -242,6 +242,21 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_28.jpg">
+</p>
+
+<br />
+
+### Editing the RASTER (orthomosaics)
+
+>  In the other hand, if you prefer **editing the raster** to fit better in the grid-shapefile, there is an amazing interactive georeferencing QGIS plugin called **[“Freehand raster georeferencer”]( https://gvellut.github.io/FreehandRasterGeoreferencer/)**. It allows you to (i) move, (ii) rotate, (iii) scale, (iv) adjust sides, and (v) georeference the raster using 2 points. 
+
+<br />
+
+* **Attention:** Another important application for raster edition are those cases where there is more than one flight with no georeferencing or GCP (ground-control-points) during the orthomosaicing. This tool allows to make sure that all orthos/layers will align and fit well to the same plot-grid-shapefile before data extraction. Such a great tool, cheers to the authors! 
+
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_freehand.jpg" width="70%" height="70%">
 </p>
 
 <br />
