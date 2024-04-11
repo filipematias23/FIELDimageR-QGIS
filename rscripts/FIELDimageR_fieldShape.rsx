@@ -14,6 +14,8 @@
 ##PlotID=optional Field fieldData
 ##output_shapefile=output vector
 
+
+
 # Get input parameters from QGIS
 num_rows <- as.numeric(num_rows)
 num_cols <- as.numeric(num_cols)
@@ -21,6 +23,7 @@ num_cols <- as.numeric(num_cols)
 library(sf)
 library(terra)
 library(dplyr)
+library(lwgeom)
 # Convert points_layer to sf format
 points_layer <- c(first_point_at_left_superior_corner,second_point_at_right_superior_corner,third_point_at_right_inferior_corner,fourth_point_at_left_inferior_corner)
 df <- data.frame(id = c(1, 2, 3, 4))
@@ -28,7 +31,7 @@ points_layer<-st_sf(df,geometry=points_layer)
 print(points_layer)
 # Load the raster layer
 mosaic <- rast(mosaic_layer)
-
+print(buffer)
 # Set the number of rows and columns for the grid
 if (length(points_layer$geometry) == 4) {
   
@@ -44,12 +47,14 @@ if (length(points_layer$geometry) == 4) {
   linMod <- lm(formula = cbind(controlpoints[, 3], controlpoints[, 4]) ~ controlpoints[, 1] + controlpoints[, 2], data = controlpoints)
   
   parameters <- matrix(linMod$coefficients[2:3, ], ncol = 2)
+  print(parameters)
   intercept <- matrix(linMod$coefficients[1, ], ncol = 2)
-  
+  print(intercept)
   geometry <- grid * parameters + intercept
-  
+  print(parameters)
+  print(intercept)
   grid_shapefile <- st_sf(geometry, crs = st_crs(mosaic)) %>% mutate(ID = seq(1, length(geometry)))
-  
+  print(grid_shapefile)
   rect_around_point <- function(x, xsize, ysize) {
     bbox <- st_bbox(x)
     bbox <- bbox + c(xsize / 2, ysize / 2, -xsize / 2, -ysize / 2)
@@ -57,27 +62,62 @@ if (length(points_layer$geometry) == 4) {
   }
   
   if (!is.null(x_plot_size) && !is.null(y_plot_size)) {
-    if (st_is_longlat(grid_shapefile)) {
+  if (st_is_longlat(grid_shapefile)) {
       grid_shapefile <- st_transform(grid_shapefile, crs = 3857)
-    }
+      cen <- suppressWarnings(st_centroid(grid_shapefile))
+      bbox_list <- lapply(st_geometry(cen), st_bbox)
+      points_list <- lapply(bbox_list, st_as_sfc)
     
-    cen <- suppressWarnings(st_centroid(grid_shapefile))
+      rectangles <- lapply(points_list, function(pt) rect_around_point(pt, x_plot_size, y_plot_size))
     
-    bbox_list <- lapply(st_geometry(cen), st_bbox)
-    points_list <- lapply(bbox_list, st_as_sfc)
-    
-    rectangles <- lapply(points_list, function(pt) rect_around_point(pt, x_plot_size, y_plot_size))
-    
-    points <- rectangles[[1]]
-    for (i in 2:length(rectangles)) {
+      points <- rectangles[[1]]
+      for (i in 2:length(rectangles)) {
       points <- c(points, rectangles[[i]])
-    }
+      }
+      st_crs(points) <- st_crs(cen)
+      grid <- st_as_sf(points)
+      grid<-st_transform(grid, st_crs('EPSG:4326'))
+      b<-st_transform(grid_shapefile, crs = 4326)
+      rot = function(x) matrix(c(cos(x), sin(x), -sin(x), cos(x)), 2, 2)
+      extcoords1 <- st_coordinates(st_geometry(b))
+      pair<-st_sfc(st_point(c(extcoords1[,1][1],extcoords1[,2][1])), st_point(c(extcoords1[,1][4],extcoords1[,2][4])), crs = 4326)
+      rotRad<-as.numeric(st_geod_azimuth(pair))
+      ga = st_geometry(grid)
+      cga = st_centroid(ga)
+      grid_shapefile = (ga-cga) * rot(rotRad)+cga
+      st_crs(grid_shapefile) <- st_crs(mosaic)
+      grid_shapefile<-st_as_sf(grid_shapefile)
+      print(grid_shapefile)  
+      }else
+     {
+      cen <- suppressWarnings(st_centroid(grid_shapefile))
     
-    st_crs(points) <- st_crs(cen)
-    grid_shapefile <- st_as_sf(points)
-    grid_shapefile <- st_transform(grid_shapefile, st_crs(mosaic))
-  }
-  
+      bbox_list <- lapply(st_geometry(cen), st_bbox)
+      points_list <- lapply(bbox_list, st_as_sfc)
+    
+      rectangles <- lapply(points_list, function(pt) rect_around_point(pt, x_plot_size, y_plot_size))
+    
+      points <- rectangles[[1]]
+      for (i in 2:length(rectangles)) {
+        points <- c(points, rectangles[[i]])
+      }
+      st_crs(points) <- st_crs(cen)
+      grid <- st_as_sf(points)
+      st_crs(grid) <- st_crs(mosaic)
+      b<-st_transform(grid_shapefile, crs = 4326)
+      rot = function(x) matrix(c(cos(x), sin(x), -sin(x), cos(x)), 2, 2)
+      extcoords1 <- st_coordinates(st_geometry(b))
+      pair<-st_sfc(st_point(c(extcoords1[,1][1],extcoords1[,2][1])), st_point(c(extcoords1[,1][4],extcoords1[,2][4])), crs = 4326)
+      rotRad<-as.numeric(st_geod_azimuth(pair))
+      ga = st_geometry(grid)
+      cga = st_centroid(ga)
+      grid_shapefile = (ga-cga) * rot(rotRad)+cga
+      st_crs(grid_shapefile) <- st_crs(mosaic)
+      grid_shapefile<-st_as_sf(grid_shapefile)
+      print(grid_shapefile)  
+}
+}
+
   if (!is.null(buffer)) {
       if (st_is_longlat(grid_shapefile)) {
         grid_shapefile <- st_transform(grid_shapefile, 
