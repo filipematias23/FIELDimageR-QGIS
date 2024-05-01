@@ -406,6 +406,20 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <br />
 
+> **Attention:** In case the user has **only one flight** (e.g., one DSM) the function **`fieldInterpolate`** can be used to creat the soil-reference based on sampled points at the DSM. First of all, the user needs to creat a point layer shp on **Layer > Creat Layer > New Shapefile Layer** making sure to use the same CRS of the DSM mosaic (steps below). Now, with the function **`fieldInterpolate`** the user can informe the DSM (with plants) and Points.shp to creat the new Interpolated DSM to be used as soil base when calculating the Canopy-Height-Model (CHM) and Canopy-Volume-Model (CVM) with **`fieldHeight`**. 
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_34_1a.jpg">
+</p>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_34_1b.jpg">
+</p>
+
+<br />
+
 [Menu](#menu)
 
 <div id="p9" />
