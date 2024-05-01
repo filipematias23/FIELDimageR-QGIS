@@ -1,0 +1,5 @@
+{"ALG_DESC": "Making raster based on interpolated values from sampled poits (x and y, or longitude and latitude) as predictors (independent variables).",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic with 1 layer.",
+  "points_shapefile": "Points shape file layer to be used as reference.",
+  "output_interpolate": "Output raster layer with digital volume (CVM=Canopy Volume Model)."}
