@@ -1,6 +1,6 @@
 ##FIELDimageR=group
-##num_rows=string 10
-##num_cols=string 10
+##num_rows=string 9
+##num_cols=string 14
 ##first_point_at_left_superior_corner=point 
 ##second_point_at_right_superior_corner=point 
 ##third_point_at_right_inferior_corner=point 
