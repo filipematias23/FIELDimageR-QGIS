@@ -162,7 +162,24 @@
 ---------------------------------------------
 ### Building the plot shapefile
 
-> FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape** at the **Processing Toolbox > R > FIELDimageR > fieldShape** to creat a basic *grid_shapefile*. The function starts by setting four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom). The next step is provide the number of columns and rows.
+> FIELDimageR-QGIS allows drawing the plot shape file using the function **fieldShape** at the **Processing Toolbox > R > FIELDimageR > fieldShape** to creat a basic *grid_shapefile*.
+
+<br />
+
+> Installing **[QuickMapServices](https://plugins.qgis.org/plugins/quick_map_services/)** plugin in **QGIS** following the steps:
+
+***Plugins menu toolbar > Manage and Install plugins > QuickMapServices > Install***
+
+<br />
+
+> There are two ways of making grids:
+
+* **(Option 1)** Clicking in each corner using a mosaic as reference
+* **(Option 2)** Uploading the four-points-shapefile (e.g., GPS coordinates file or external layer shp.)
+
+<br />
+
+> As an example let´s use the option 1: The function starts by setting four points at the field trial corners according to the steps highlighted below. The points sequence must be (1st point) left superior corner, (2nd point) right superior corner, (3rd point) right inferior corner, and (4th point) left inferior corner. At this point, the experimental borders can be eliminated (check the example). The mosaic will be presented for visualization with the North part on the superior part (top) and the south in the inferior part (bottom). The next step is provide the number of columns and rows.
 
 Attention: The plots are identified in ascending order from left to right and bottom to top being evenly spaced and distributed inside the selected area independent of alleys.
 
