@@ -23,7 +23,7 @@
 library(sf)
 library(terra)
 library(dplyr)
-library(lwgeom)
+
 
 # Get input parameters from QGIS
 num_rows <- as.numeric(num_rows)
@@ -104,13 +104,9 @@ if (length(points_layer$geometry) == 4) {
       grid <- st_as_sf(points)
       grid<-st_transform(grid, st_crs('EPSG:4326'))
       b<-st_transform(grid_shapefile, crs = 4326)
-      rot = function(x) matrix(c(cos(x), sin(x), -sin(x), cos(x)), 2, 2)
-      extcoords1 <- st_coordinates(st_geometry(b))
-      pair<-st_sfc(st_point(c(extcoords1[,1][1],extcoords1[,2][1])), st_point(c(extcoords1[,1][4],extcoords1[,2][4])), crs = 4326)
-      rotRad<-as.numeric(st_geod_azimuth(pair))
       ga = st_geometry(grid)
       cga = st_centroid(ga)
-      grid_shapefile = (ga-cga) * rot(rotRad)+cga
+      grid_shapefile = (ga-cga) *parameters+cga
       if(!is.null(mosaic_layer)){
       st_crs(grid_shapefile) <- st_crs(mosaic)
       grid_shapefile<-st_as_sf(grid_shapefile)
@@ -142,13 +138,9 @@ if (length(points_layer$geometry) == 4) {
       st_crs(grid) <- st_crs(points_layer)
       }
       b<-st_transform(grid_shapefile, crs = 4326)
-      rot = function(x) matrix(c(cos(x), sin(x), -sin(x), cos(x)), 2, 2)
-      extcoords1 <- st_coordinates(st_geometry(b))
-      pair<-st_sfc(st_point(c(extcoords1[,1][1],extcoords1[,2][1])), st_point(c(extcoords1[,1][4],extcoords1[,2][4])), crs = 4326)
-      rotRad<-as.numeric(st_geod_azimuth(pair))
       ga = st_geometry(grid)
       cga = st_centroid(ga)
-      grid_shapefile = (ga-cga) * rot(rotRad)+cga
+      grid_shapefile = (ga-cga) *parameters+cga
       if(!is.null(mosaic_layer)){
       st_crs(grid_shapefile) <- st_crs(mosaic)
       grid_shapefile<-st_as_sf(grid_shapefile)
