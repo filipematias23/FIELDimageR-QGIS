@@ -41,6 +41,8 @@
 
 [Step 15. Area Under the Curve (AUC)](#p15)
 
+[Step 16. Multispectral (merge multiple raster into a new raster)](#p16)
+
 [Contact](#contact)
 
 <div id="instal" />
@@ -670,8 +672,25 @@ This function generates:
 
 [Menu](#menu)
 
-<div id="contact" />
+<div id="p16" />
 
+---------------------------------------------
+### Multispectral (merge multiple raster into a new raster)
+
+> Merge two or more overlapping rasters into one new raster using **`fieldMultispectral`**. Normally, orthomosaicing software provide single band rasters for multispectral images. This function allows to merge these single rasters in one **Multispectral.tif**. The same function can be used to merge other type of overlaying raster (e.g., vegetation indices).
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_50.jpg">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="contact" />
+  
 ---------------------------------------------
 ### More information about **FIELDimageR**:
 
