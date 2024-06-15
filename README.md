@@ -39,6 +39,8 @@
 
 [Step 14. Image segmentation based on machine learning models as Random Forest (Supervised)](#p14)
 
+[Step 15. Area Under the Curve (AUC)](#p15)
+
 [Contact](#contact)
 
 <div id="instal" />
@@ -645,6 +647,23 @@ This function generates:
 
 <p align="center">
   <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_48.jpg" width="70%" height="70%">
+</p>
+
+<br />
+
+[Menu](#menu)
+
+<div id="p15" />
+
+---------------------------------------------
+### Area Under the Curve (AUC)
+
+> There are many interesting ways to use the UAV data for plant breeding. The first way is evaluating single flights for specific time point (e.g., evaluating maturity, plant height, or disease resistance). These traits normally occur in a specific moment during the season and can be evaluated with 1 or few flights. On the other hand, traits such as plant development, diseases, biomass, and yield can be evaluated throughout the entire season using UAV data. In this case, one good strategy is combining all flights in the same analysis by calculating the area under the curve (AUC) for one trait over the time. Using AUC is an interesting way to observe and compare different biological paths and use only one general trait (e.g., growing performance, diseases resistance, etc.) for applying selection. **FIELDimageR-QGIS** has one function called **`fieldAUC`** that uses indices-raster from different time points (DAP = days after planting) to calculate the AUC per plot and save it as *shp* at the **Output_AUC**. In the example below the AUC was calculate for NGRDI index over 30, 70 and 100 DAP in potato breeding. Download the raster example here: 
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_51.jpg">
 </p>
 
 <br />
