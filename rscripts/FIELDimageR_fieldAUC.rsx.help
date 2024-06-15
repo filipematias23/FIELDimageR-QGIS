@@ -1,0 +1,7 @@
+{"ALG_DESC": "Calculate the area under the curve given by vectors of xy-coordinates.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "grid_shapefile_layer": "Grid plot shape file layer to be used as reference, please use the function fieldShape.",
+  "index_layer_1": "Input raster layer containing the vegetation index orthomosaic at the same sequence of data colection to calculate the area under the curve (AUC). At least 2 orthos are necessary (index_layer_1, index_layer_2, etc.).",
+  "DAP_sequence": "Sequence of days after planting (DAP) or flight days (e.g. 10, 20, 30, etc.).",
+  "AUC_method": "AUC interpolation method: trapezoid, step, linear, spline. For more information check for the R package DescTools::AUC.",
+  "output_AUC": "Output grid shapefile layer with data extracted per plot."}

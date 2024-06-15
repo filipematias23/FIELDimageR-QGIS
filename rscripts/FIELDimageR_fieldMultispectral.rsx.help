@@ -1,0 +1,9 @@
+{"ALG_DESC": "Create/joining separeate layers (Red, Green, Blue, RE, NIR) to one single multispectral object-image.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_Red": "Input raster layer - RED.",
+  "mosaic_Green": "Input raster layer - GREEN.",
+  "mosaic_Blue": "Optional - Input raster layer - BLUE.",
+  "mosaic_RedEdge": "Optional - Input raster layer - RedEdge (RE).",
+  "mosaic_NIR": "Input raster layer - NIR.",
+  "layer_names": "Optional - use other names than default sequence (e.g: Red, Green, Blue, RE, NIR). Please, use comma (,) between names.",
+  "Multispectral": "Output is a new Multispectral raster sequence: Red, Green, Blue, RedEdge, and NIR."}
