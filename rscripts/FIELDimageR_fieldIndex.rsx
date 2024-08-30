@@ -87,7 +87,7 @@ print(My_index)
 my_layers <- list()
 if (length(My_index) > 0) {
   for (i in 1:length(My_index)) {
-    fun1 <- function(Red, Green,Blue,RE,NIR){eval(parse(text = as.character(Ind$eq[Ind$index == selected_indices[i]])))}
+    fun1 <- function(Red, Green,Blue,RE,NIR){eval(parse(text = as.character(My_index[i])))}
     my_layer <- lapp(mosaic,fun1,usenames=TRUE)
     my_layers[[My_index[i]]] <- my_layer
   }
