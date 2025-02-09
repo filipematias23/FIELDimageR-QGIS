@@ -38,7 +38,12 @@ fun=c('mean','sum','max','min','mode','stdev','variance','coefficient_of_variati
 plotInfo <- exact_extract(mosaic, fieldShape, fun)
 }
 
-Out<-cbind(fieldShape, plotInfo[,!colnames(plotInfo)%in%c("ID"),drop=FALSE])
+if ("ID" %in% colnames(plotInfo)) {
+  plotInfo <- plotInfo[, !colnames(plotInfo) %in% "ID", drop = FALSE]
+}
+# Combine fieldShape and plotInfo safely
+Out <- cbind(fieldShape, plotInfo)
+Out <- Out[, !colnames(Out) %in% "fid", drop = FALSE]
 
 # Write the grid shapefile to disk
 output_shapefile_info <- Out
