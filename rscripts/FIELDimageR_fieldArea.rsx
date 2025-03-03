@@ -11,7 +11,7 @@ library(dplyr)
 library(exactextractr)
 mosaic <- rast(mosaic_remSoil_layer)
 fieldShape<-st_as_sf(grid_shapefile_layer)
-
+fieldShape <- fieldShape %>% dplyr::select(-fid)
  
 
 field <- field
