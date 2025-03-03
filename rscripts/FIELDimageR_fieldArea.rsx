@@ -11,17 +11,19 @@ library(dplyr)
 library(exactextractr)
 mosaic <- rast(mosaic_remSoil_layer)
 fieldShape<-st_as_sf(grid_shapefile_layer)
-fieldShape <- fieldShape %>% dplyr::select(-fid)
- 
+print(fieldShape)
+if ("fid" %in% colnames(fieldShape)) {
+  fieldShape <- fieldShape %>% dplyr::select(-fid)
+}
 
 field <- field
 
 print(field)
-if (is.null(field)) {
+if (is.null(field) || field == "fid") {
 
-  terra_vect <- vect(grid_shapefile_layer)
+  terra_vect <- vect(fieldShape)
 
-  terra_rast <- rasterize(terra_vect, mosaic, field = "PlotID")
+  terra_rast <- rasterize(terra_vect, mosaic, field = "ID")
 
   total_pixelcount <- exactextractr::exact_extract(terra_rast, fieldShape, fun = "count",force_df = TRUE)
 
@@ -29,7 +31,7 @@ if (is.null(field)) {
 
 } else {
 
-  terra_vect <- vect(grid_shapefile_layer)
+  terra_vect <- vect(fieldShape)
 
   terra_rast <- rasterize(terra_vect, mosaic, field = field)
 
