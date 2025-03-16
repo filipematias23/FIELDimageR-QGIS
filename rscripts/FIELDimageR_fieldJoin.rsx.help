@@ -1,0 +1,4 @@
+{"ALG_DESC": "Merging multiple raster layers into a unified multi-band raster stack.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "Load_rasters": "Choose the raster layers you want to combine into a single multi-band raster stack.",
+  "Output_raster": "Output multi-band raster stack."}

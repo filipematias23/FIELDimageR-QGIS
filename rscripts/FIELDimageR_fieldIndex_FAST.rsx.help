@@ -1,0 +1,8 @@
+{"ALG_DESC": "Building vegetation indices using Red, Green, Blue, Red Edge, and NIR band.",
+  "ALG_CREATOR": "Popat Pawar & Filipe Matias",
+  "mosaic_layer": "Input raster layer containing the field orthomosaic with at least 3 layers.",
+  "bands": "Sequence of bands/wavelength in the raster. As an example, the layers must be writed 'Red,Blue,Green' for RGB images and 'Blue,Green,Red,RE,NIR' for multispectral. Attention: it must be 'Red' and NOT 'red'; 'Blue' and NOT 'blue'; 'RE' and NOT 'RedEdge'; etc.",
+  "index": "vector with the vegetation indices to be calculated. Included indices are avaliable for RGB Images (BI, BIM, SCI, GLI, HI, NGRDI, SI, VARI, HUE, BGI, CI, EGVI, ERVI, GB, GLAI, GR, MGVRI, NB, NG, NGBDI, NR, RB, RI, S, SAVI, SHP, GD, VIG) and Multispectral images (PSRI, NDVI, GNDVI, RVI, NDRE, TVI, CVI, CIG, CIRE, DVI, EVI, ARI, VIRE, TCARI, ARVI, BAI, BWDRVI, CCCI, GARI, GDVI, GOSAVI, GRVI, GSAVI, IPVI, MSR, NDWI, NLI, OSAVI, PNDVI, RDVI, REDVI, RESR, TDVI, VIN, WDRVI, WSI). More information at https://github.com/OpenDroneMap/FIELDimageR#P6.",
+  "My_index": "vector with diferent indices equations separeted by ',' (comma) to be calculated using the bands names: Blue, Green, Red, RE, and NIR.",
+  "n_cores": "number of cores to use for multicore processing (Parallel)",
+  "output_directory": "Output folder to save calculated vegetation indices TIFs (Attention: Do not use [punctuation marks of writing] in the folders name)."}
