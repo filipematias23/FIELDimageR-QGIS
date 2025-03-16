@@ -293,9 +293,82 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <br />
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/filipematias23/images/master/readme/F6ind3.jpeg">
-</p>
+**Table. Available indices in FIELDimageR. Any other index can be implemented using the option myIndex and the new formula (FIELDimageR::fieldIndex).**
+
+#### RGB Indices
+
+| Description | Index | Formula | Related traits | References |
+|-------------|-------|---------|----------------|------------|
+| Blue Green Pigment Index | BGI | B/G | Chlorophyll, LAI | Zarco-Tejada et al. (2005) |
+| Brightness Index | BI | sqrt((R^2+G^2+B^2)/3) | Vegetation coverage, water content | Richardson and Wiegand (1977) |
+| Burned Area Index | BAI | 1/((0.1-R)^2+(0.06-NIR)^2) | Burned areas | Martín (1998) |
+| Coloration Index | CI | ((R-B)/R) | Soil color | Escadafal & Huete (1991) |
+| Excess Green Vegetation Index | EGVI | 2*G-R-B | Weed identification | Woebbecke et al. (1995) |
+| Excess Red Vegetation Index | ERVI | ((1.4*R)-G) | Vegetation identification | Meyer & Neto (2008) |
+| Green-Blue Index | GB | G/B | Weed identification | Woebbecke et al. (1995) |
+| Green Difference | GD | G-(R+B)/2 | Vegetation monitoring | Tucker (1979) |
+| Green Leaf Area Index | GLAI | (25*(G-R)/(G+R-B)+1.25) | Leaf area | Louhaichi et al. (2001) |
+| Green Leaf Index | GLI | (2*G-R-B)/(2*G+R+B) | Chlorophyll | Louhaichi et al. (2001) |
+| Green-Red Index | GR | G/R | Vegetation monitoring | Tucker (1979) |
+| Modified Green Vegetation Ratio Index | MGVRI | (G^2-R^2)/(G^2+R^2) | Biomass monitoring | Bendig et al. (2015) |
+| Normalized Blue | NB | B/(R+G+B) | Early nitrogen requirements | Sripada et al. (2006) |
+| Normalized Green | NG | G/(R+G+B) | Early nitrogen requirements | Sripada et al. (2006) |
+| Normalized Green-Blue Difference Index | NGBDI | (G-B)/(G+B) | Vegetation extraction | Wang et al. (2015) |
+| Normalized Green Red Difference Index | NGRDI | (G-R)/(G+R) | Chlorophyll, biomass, water content | Tucker (1979) |
+| Normalized Red | NR | R/(R+G+B) | Early nitrogen requirements | Sripada et al. (2006) |
+| Overall Hue Index | HUE | atan(2*(B-G-R)/30.5*(G-R)) | Soil color | Escadafal et al. (1994) |
+| Primary Colors Hue Index | HI | (2*R-G-B)/(G-B) | Soil color | Escadafal et al. (1994) |
+| Red-Blue Index | RB | R/B | Weed identification | Woebbecke et al. (1995) |
+| Redness Index | RI | (R^2/(B*G^3)) | Soil color | Escadafal & Huete (1991) |
+| Saturation | S | ((R+G+B)-3*B)/(R+G+B) | Crop growth estimation | Kataoka et al. (2003) |
+| Shape Index | SHP | (2*(R-G-B)/(G-B)) | Weed identification | Woebbecke et al. (1995) |
+| Soil Adjusted Vegetation Index | SAVI | (1+0.5)*(G-R)/(G+R+0.5) | Soil-adjusted vegetation | Huete (1988) |
+| Soil Color Index | SCI | (R-G)/(R+G) | Soil color | Mathieu et al. (1998) |
+| Spectral Slope Saturation Index | SI | (R-B)/(R+B) | Soil color | Escadafal et al. (1994) |
+| Visible Atmospherically Resistant Index | VARI | (G-R)/(G+R-B) | Canopy, biomass, chlorophyll | Gitelson et al. (2002) |
+| Vegetation Index Green | VIG | (G-R)/(G+R) | Vegetation fraction | Gitelson et al. (2002) |
+
+<br />
+
+#### Indices with RedEdge and NIR
+
+| Description | Index | Formula | Related traits | References |
+|-------------|-------|---------|----------------|------------|
+| Anthocyanin Reflectance Index | ARI | (1/G)-(1/RE) | Anthocyanin content | Gitelson et al. (2001) |
+| Atmospherically Resistant Vegetation Index | ARVI | (NIR-(R-0.1*(R-B)))/(NIR+(R-0.1*(R-B))) | Atmospheric resistance | Kaufman & Tanre (1992) |
+| Blue-Wide Dynamic Range Vegetation Index | BWDRVI | (0.1*NIR-B)/(0.1*NIR+B) | Biophysical characteristics | Gitelson (2004) |
+| Canopy Chlorophyll Content Index | CCCI | ((NIR-R)/(NIR+R))/((NIR-R)/(NIR+R)) | Chlorophyll content, nitrogen status | Barnes et al. (2000) |
+| Chlorophyll index – green | CIG | (NIR/G)-1 | Chlorophyll | Gitelson et al. (2003) |
+| Chlorophyll index – red edge | CIRE | (NIR/RE)-1 | Chlorophyll | Gitelson et al. (2003) |
+| Chlorophyll vegetation index | CVI | (NIR*R)/(G^2) | Chlorophyll | Vincini et al. (2008) |
+| Difference Vegetation Index | DVI | NIR-RE | Nitrogen, chlorophyll | Jordan (1969) |
+| Enhanced vegetation index | EVI | 2.5*(NIR-R)/(NIR+6*R-7.5*B+1) | Chlorophyll, biomass, nitrogen | Huete et al. (2002) |
+| Green Atmospherically Resistant Index | GARI | (NIR-(1.7*(B-R)))/(NIR+(1.7*(B-R))) | Global vegetation | Gitelson et al. (1996) |
+| Green Difference Vegetation Index | GDVI | NIR-G | Early nitrogen requirements | Sripada et al. (2006) |
+| Green Normalized Difference Vegetation Index | GNDVI | (NIR-G)/(NIR+G) | Chlorophyll, LAI, nitrogen, protein content, water content | Gitelson et al. (1996) |
+| Green Optimized Soil Adjusted Vegetation Index | GOSAVI | (NIR-G)/(NIR+G+0.16) | Soil-adjusted vegetation | Rondeaux et al. (1996) |
+| Green Ratio Vegetation Index | GRVI | NIR/G | Early nitrogen requirements | Sripada et al. (2006) |
+| Green Soil Adjusted Vegetation Index | GSAVI | ((NIR-G)/(NIR+G+0.5))*(1+0.5) | Soil-adjusted vegetation | Sripada et al. (2006) |
+| Infrared Percentage Vegetation Index | IPVI | NIR/(NIR+R) | Vegetation fraction | Crippen (1990) |
+| Modified Simple Ratio | MSR | (NIR/R-1)/(sqrt(NIR/R)+1) | Boreal applications | Chen (1996) |
+| Normalized Difference Red Edge Index | NDRE | (NIR-RE)/(NIR+RE) | Chlorophyll | Gitelson and Merzlyak (1994) |
+| Normalized Difference Vegetation Index | NDVI | (NIR-R)/(NIR+R) | Chlorophyll, LAI, biomass, yield | Rouse et al. (1974) |
+| Normalized Difference Water Index | NDWI | (G-NIR)/(G+NIR) | Water content | McFeeters (1996) |
+| Non-Linear Index | NLI | (NIR^2-R)/(NIR^2+R) | LAI, FPAR | Goel & Qin (1994) |
+| Optimized Soil Adjusted Vegetation Index | OSAVI | (NIR-R)/(NIR+R+0.16) | Soil-adjusted vegetation | Rondeaux et al. (1996) |
+| Pan Normalized Difference Vegetation Index | PNDVI | ((NIR-(G+R+B))/(NIR+(G+R+B))) | Leaf area index | Wang et al. (2007) |
+| Plant Senescence Reflectance Index | PSRI | (R-G)/(RE) | Chlorophyll, nitrogen, maturity | Merzlyak et al. (1999) |
+| Ratio Vegetation Index | RVI | NIR/R | Biomass, water content, nitrogen | Pearson and Miller (1972) |
+| Red Edge Difference Vegetation Index | REDVI | NIR-RE | Chlorophyll estimation | Gitelson & Merzlyak (1994) |
+| Red Edge Simple Ratio | RESR | NIR/RE | Chlorophyll estimation | Gitelson & Merzlyak (1994) |
+| Renormalized Difference Vegetation Index | RDVI | (NIR-R)/(sqrt(NIR+R)) | PAR absorbed by vegetation | Roujean & Breon (1995) |
+| Transformed Chlorophyll Absorption Ratio Index | TCARI | 3*((RE-R)-0.2*(RE-G)*(RE/R)) | Chlorophyll content | Haboudane et al. (2002) |
+| Transformed Difference Vegetation Index | TDVI | 1.5*((NIR-R)/(sqrt(NIR^2+R+0.5))) | Vegetation cover | Bannari et al. (2002) |
+| Triangular vegetation index | TVI | 0.5*(120*(NIR-G)-200*(R-G)) | Green LAI, chlorophyll, canopy | Broge and Leblanc (2000) |
+| Vegetation Index Number | VIN | NIR/R | Leaf chlorophyll | Vincini et al. (2008) |
+| Vegetation Index using Red Edge | VIRE | (RE-R)/(RE+R) | Chlorophyll estimation | Gitelson & Merzlyak (1994) |
+| Water Stress Index | WSI | 5*(NIR-R)/(NIR+R)-(RE-NIR)/(RE+NIR) | Water stress | Zarco-Tejada et al. (2012) |
+| Wide Dynamic Range Vegetation Index | WDRVI | (0.2*NIR-R)/(0.2*NIR+R) | Biophysical characteristics | Gitelson (2004) |
 
 <br />
 
