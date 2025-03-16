@@ -409,6 +409,14 @@ Attention: The plots are identified in ascending order from left to right and bo
 
 <br />
 
+> For processing large orthomosaics efficiently, use the **`fieldIndex_FAST`** function. This function is optimized for performance when dealing with high-resolution or extensive aerial imagery datasets. It calculates vegetation indices more quickly than standard methods **`fieldIndex`**, making it particularly useful for large-scale agricultural or environmental monitoring projects. The **`fieldIndex_FAST`** function achieves its superior performance through parallel processing and direct saving of index TIFs to the specified directory. However, this efficiency comes with an additional step: (1) After processing, you must import the individual index images back into QGIS. (2) Use the **`fieldJoin`** function to merge these single raster layers into one multi-band raster.
+
+<p align="center">
+  <img src="https://github.com/filipematias23/images_FQ/blob/main/readme/qgis_52.jpg">
+</p>
+
+<br />
+
 [Menu](#menu)
 
 <div id="p6" />
